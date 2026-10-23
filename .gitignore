@@ -1,0 +1,19 @@
+# i2Print client workspace — local repository, no remote.
+
+# Third-party material scraped from the client's existing site.
+# Not our work product, re-downloadable, and their copyright. Keep it on disk,
+# out of version history.
+04-Assets/scraped-*/
+
+# OS and Office cruft
+Thumbs.db
+desktop.ini
+.DS_Store
+~$*
+*.tmp
+
+# Local secrets, should any tooling land here later
+.env
+.env.*
+*.key
+*.pem

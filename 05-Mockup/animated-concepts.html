@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>i2Print Motion Concepts</title>
+<meta name="description" content="Three signature animation concepts for i2print inc., by RaxaRisk. Concept only.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue: #3A62C9; --blue-pale: #E1E9FE; --orange: #FB8500; --ink: #36333C; --muted: #5d5966;
+    --line: #e3e6ef; --pale: #F6F8FE; --cyan: #00A6D6; --magenta: #E0007A; --yellow: #FFD400; --ok: #1d7a46;
+    --radius: 16px;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: "Jost", system-ui, sans-serif; color: var(--ink); background: var(--white, #fff); line-height: 1.5; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
+  .ink-bar { height: 6px; background: linear-gradient(90deg, var(--cyan) 0 33.3%, var(--magenta) 33.3% 66.6%, var(--yellow) 66.6%); }
+  header { padding: 28px 0 8px; }
+  header .eyebrow { font-weight: 600; color: var(--blue); letter-spacing: .06em; text-transform: uppercase; font-size: 13px; }
+  header h1 { font-size: clamp(28px, 4vw, 40px); margin: 6px 0 6px; line-height: 1.1; }
+  header p { margin: 0; color: var(--muted); max-width: 62ch; }
+  section.demo { padding: 36px 0; border-bottom: 1px solid var(--line); }
+  .demo-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 20px; margin-bottom: 18px; }
+  .demo-head h2 { margin: 0; font-size: 24px; }
+  .demo-head h2 span { color: var(--blue); }
+  .demo-head p { margin: 4px 0 0; color: var(--muted); max-width: 60ch; font-size: 16px; }
+  .replay { font: 600 15px "Jost", sans-serif; border-radius: 999px; padding: 9px 18px; border: 2px solid var(--blue); background: #fff; color: var(--blue); cursor: pointer; }
+  .replay:hover { background: var(--blue-pale); }
+  .stage { border-radius: var(--radius); background: radial-gradient(900px 400px at 85% 10%, var(--blue-pale), transparent 60%), var(--pale); border: 1px solid var(--line); padding: 40px 28px; overflow: hidden; }
+
+  /* ---------- 1. CMYK registration headline ---------- */
+  .reg { position: relative; display: inline-block; font-weight: 700; font-size: clamp(38px, 7vw, 78px); line-height: 1.02; letter-spacing: -.01em; }
+  .reg .layer { position: absolute; inset: 0; mix-blend-mode: multiply; }
+  .reg .base { visibility: hidden; }
+  .reg .c { color: var(--cyan); } .reg .m { color: var(--magenta); } .reg .y { color: var(--yellow); }
+  .reg .k { color: var(--ink); opacity: 0; mix-blend-mode: normal; }
+  .reg .k em { font-style: normal; color: var(--blue); }
+  .reg.run .c { animation: plate 1.1s cubic-bezier(.2,.8,.2,1) both; --dx: -26px; --dy: -14px; }
+  .reg.run .m { animation: plate 1.1s .12s cubic-bezier(.2,.8,.2,1) both; --dx: 22px; --dy: 10px; }
+  .reg.run .y { animation: plate 1.1s .24s cubic-bezier(.2,.8,.2,1) both; --dx: -12px; --dy: 18px; }
+  .reg.run .k { animation: keyplate .5s 1.25s ease-out forwards; }
+  @keyframes plate { from { transform: translate(var(--dx), var(--dy)); opacity: 0; } 30% { opacity: 1; } to { transform: none; opacity: 1; } }
+  @keyframes keyplate { to { opacity: 1; } }
+  .reg-sub { margin-top: 18px; color: var(--muted); font-size: 19px; opacity: 0; }
+  .reg.run + .reg-sub { animation: fadeup .6s 1.6s ease-out forwards; }
+  @keyframes fadeup { from { transform: translateY(8px); } to { opacity: 1; transform: none; } }
+  .marks { position: absolute; top: 12px; right: 14px; display: flex; gap: 8px; opacity: .55; }
+  .marks i { width: 18px; height: 18px; border-radius: 50%; border: 2px solid currentColor; position: relative; display: block; }
+  .marks i::before, .marks i::after { content: ""; position: absolute; background: currentColor; }
+  .marks i::before { left: 50%; top: -5px; bottom: -5px; width: 2px; transform: translateX(-50%); }
+  .marks i::after { top: 50%; left: -5px; right: -5px; height: 2px; transform: translateY(-50%); }
+
+  /* ---------- 2. Stopwatch ---------- */
+  .watch-row { display: grid; grid-template-columns: auto 1fr; gap: 36px; align-items: center; }
+  .watch { width: 220px; height: 250px; position: relative; }
+  .watch svg { width: 100%; height: 100%; overflow: visible; }
+  .wheel { transform-origin: 110px 140px; }
+  .watch.run .wheel { animation: spin 1.4s cubic-bezier(.3,.1,.2,1) both; }
+  @keyframes spin { from { transform: rotate(-540deg); } to { transform: rotate(0); } }
+  .hand { transform-origin: 110px 140px; transform: rotate(0deg); }
+  .watch.run .hand { animation: sweep 1.6s 1.2s cubic-bezier(.5,0,.2,1) forwards; }
+  @keyframes sweep { to { transform: rotate(300deg); } }
+  .watch.run .crown { animation: press .25s 1.05s ease-in-out 2; transform-origin: 110px 22px; }
+  @keyframes press { 50% { transform: translateY(5px); } }
+  .ready { font-weight: 700; font-size: clamp(30px, 4.6vw, 52px); line-height: 1.05; margin: 0; }
+  .ready .when { color: var(--blue); display: inline-block; min-width: 6ch; }
+  .ready-sub { color: var(--muted); margin: 10px 0 0; font-size: 18px; }
+  .chip { display: inline-block; margin-top: 14px; font-size: 13px; font-weight: 600; color: #6b4b00; background: #fff4cc; border: 1px dashed #d9a400; border-radius: 6px; padding: 2px 8px; }
+  .choices { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+  .choices button { font: 600 15px "Jost", sans-serif; padding: 8px 14px; border-radius: 999px; border: 1px solid #c9cedb; background: #fff; color: var(--ink); cursor: pointer; }
+  .choices button[aria-pressed="true"] { background: var(--ink); color: #fff; border-color: var(--ink); }
+
+  /* ---------- 3. File check scan ---------- */
+  .scan-row { display: grid; grid-template-columns: 1.2fr 1fr; gap: 28px; align-items: center; }
+  .art { position: relative; aspect-ratio: 3.75 / 2.25; border-radius: 6px; overflow: hidden; box-shadow: 0 18px 40px -20px rgba(20,30,70,.45); background: linear-gradient(135deg, #5680E9, #E0007A); }
+  .art .bubbles { position: absolute; inset: 0; background:
+      radial-gradient(circle at 20% 30%, rgba(255,255,255,.25) 0 40px, transparent 41px),
+      radial-gradient(circle at 75% 70%, rgba(255,255,255,.2) 0 60px, transparent 61px),
+      radial-gradient(circle at 60% 20%, rgba(255,255,255,.15) 0 30px, transparent 31px); }
+  .art .name { position: absolute; inset: 0; display: grid; place-items: center; text-align: center; color: #fff; }
+  .art .name b { font-size: clamp(22px, 3.6vw, 38px); display: block; line-height: 1.1; }
+  .art .name span { font-size: clamp(13px, 1.6vw, 17px); opacity: .9; }
+  .art svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .bleed { fill: rgba(220,38,38,.28); opacity: 0; }
+  .trim, .safe { fill: none; stroke-width: 2; stroke-dasharray: 8 6; vector-effect: non-scaling-stroke; }
+  .trim { stroke: #1d4ed8; } .safe { stroke: #16a34a; }
+  .line-draw { stroke-dashoffset: 0; }
+  .beam { position: absolute; top: 0; bottom: 0; width: 70px; left: -80px; background: linear-gradient(90deg, transparent, rgba(255,255,255,.75), transparent); mix-blend-mode: screen; opacity: 0; }
+  .scan.run .beam { animation: beam 1.1s ease-in-out forwards; }
+  @keyframes beam { 0% { left: -80px; opacity: 1; } 100% { left: 100%; opacity: 1; } }
+  .scan .trim, .scan .safe { opacity: 0; }
+  .scan.run .bleed { animation: show .4s 1.1s forwards; }
+  .scan.run .trim { animation: show .01s 1.2s forwards, draw 1s 1.2s ease-out both; }
+  .scan.run .safe { animation: show .01s 1.5s forwards, draw 1s 1.5s ease-out both; }
+  @keyframes show { to { opacity: 1; } }
+  @keyframes draw { from { stroke-dasharray: 0 2000; } to { stroke-dasharray: 8 6; } }
+  .results { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+  .results li { display: grid; grid-template-columns: 28px 1fr; gap: 10px; align-items: start; background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; opacity: 0; transform: translateY(8px); font-size: 16px; }
+  .results .ic { width: 24px; height: 24px; border-radius: 50%; display: grid; place-items: center; color: #fff; font-weight: 700; font-size: 14px; transform: scale(0); }
+  .ic.ok { background: var(--ok); } .ic.warn { background: #a35f00; }
+  .scan.run ~ .results li, .scan-row.run .results li { animation: rise .45s ease-out forwards; }
+  .scan-row.run .results li .ic { animation: pop .35s cubic-bezier(.3,1.6,.5,1) forwards; }
+  .scan-row.run .results li:nth-child(1), .scan-row.run .results li:nth-child(1) .ic { animation-delay: 1.9s; }
+  .scan-row.run .results li:nth-child(2), .scan-row.run .results li:nth-child(2) .ic { animation-delay: 2.15s; }
+  .scan-row.run .results li:nth-child(3), .scan-row.run .results li:nth-child(3) .ic { animation-delay: 2.4s; }
+  .scan-row.run .results li:nth-child(4), .scan-row.run .results li:nth-child(4) .ic { animation-delay: 2.65s; }
+  @keyframes rise { to { opacity: 1; transform: none; } }
+  @keyframes pop { to { transform: scale(1); } }
+  .legend { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 10px; font-size: 14px; color: var(--muted); }
+  .legend span::before { content: ""; display: inline-block; width: 18px; border-top: 2px dashed; margin-right: 6px; vertical-align: middle; }
+  .legend .l1::before { border-top: 8px solid rgba(220,38,38,.3); } .legend .l2::before { border-color: #1d4ed8; } .legend .l3::before { border-color: #16a34a; }
+
+  footer { padding: 28px 0 40px; color: var(--muted); font-size: 14px; }
+  footer ul { margin: 8px 0 0; padding-left: 18px; }
+
+  @media (max-width: 760px) {
+    .watch-row, .scan-row { grid-template-columns: 1fr; }
+    .watch { width: 170px; height: 194px; }
+    .stage { padding: 28px 18px; }
+  }
+
+  /* Respect the device's reduced-motion setting: show the end state, no movement */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: .01ms !important; animation-delay: 0s !important; animation-iteration-count: 1 !important; }
+  }
+</style>
+</head>
+<body>
+<div class="ink-bar" aria-hidden="true"></div>
+<header>
+  <div class="wrap">
+    <div class="eyebrow">i2print inc. · Motion concepts · by RaxaRisk</div>
+    <h1>Three signature moments</h1>
+    <p>Small, fast animations built on i2Print's own brand: the press, the stopwatch, and the file check. Each plays once, takes about a second or two, and stays still for visitors whose device is set to reduce motion. Press "Replay" to watch again.</p>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- 1. CMYK registration -->
+  <section class="demo" aria-labelledby="d1">
+    <div class="demo-head">
+      <div>
+        <h2 id="d1"><span>1.</span> The headline prints itself</h2>
+        <p>Cyan, magenta and yellow plates slide into register, then black locks it in, like a sheet coming off the press.</p>
+      </div>
+      <button class="replay" type="button" data-replay="reg">Replay</button>
+    </div>
+    <div class="stage" style="position:relative">
+      <div class="marks" aria-hidden="true"><i style="color:var(--cyan)"></i><i style="color:var(--magenta)"></i><i style="color:#c9a800"></i><i style="color:var(--ink)"></i></div>
+      <h3 class="reg" id="reg" aria-label="Queens' fast local printer.">
+        <span class="base" aria-hidden="true">Queens' fast<br>local printer.</span>
+        <span class="layer c" aria-hidden="true">Queens' fast<br>local printer.</span>
+        <span class="layer m" aria-hidden="true">Queens' fast<br>local printer.</span>
+        <span class="layer y" aria-hidden="true">Queens' fast<br>local printer.</span>
+        <span class="layer k" aria-hidden="true">Queens' fast<br><em>local printer.</em></span>
+      </h3>
+      <p class="reg-sub">Files checked by a printer. Prices up front. Pickup in Long Island City.</p>
+    </div>
+  </section>
+
+  <!-- 2. Stopwatch -->
+  <section class="demo" aria-labelledby="d2">
+    <div class="demo-head">
+      <div>
+        <h2 id="d2"><span>2.</span> The stopwatch logo tells the speed story</h2>
+        <p>The color wheel from the i2Print logo spins up, the crown clicks, and the hand sweeps to the turnaround for the product you pick.</p>
+      </div>
+      <button class="replay" type="button" data-replay="watch">Replay</button>
+    </div>
+    <div class="stage">
+      <div class="watch-row">
+        <div class="watch" id="watch" aria-hidden="true">
+          <svg viewBox="0 0 220 250">
+            <defs>
+              <clipPath id="face"><circle cx="110" cy="140" r="74"/></clipPath>
+            </defs>
+            <rect class="crown" x="96" y="14" width="28" height="18" rx="5" fill="#36333C"/>
+            <rect x="104" y="30" width="12" height="14" fill="#36333C"/>
+            <rect x="166" y="52" width="20" height="12" rx="4" fill="#36333C" transform="rotate(40 176 58)"/>
+            <circle cx="110" cy="140" r="92" fill="#36333C"/>
+            <circle cx="110" cy="140" r="80" fill="#fff"/>
+            <g clip-path="url(#face)">
+              <g class="wheel">
+                <path d="M110 140 L110 66 A74 74 0 0 1 162.3 87.7 Z" fill="#00A6D6"/>
+                <path d="M110 140 L162.3 87.7 A74 74 0 0 1 184 140 Z" fill="#3b5bdb"/>
+                <path d="M110 140 L184 140 A74 74 0 0 1 162.3 192.3 Z" fill="#7b3fe4"/>
+                <path d="M110 140 L162.3 192.3 A74 74 0 0 1 110 214 Z" fill="#E0007A"/>
+                <path d="M110 140 L110 214 A74 74 0 0 1 57.7 192.3 Z" fill="#ff3b3b"/>
+                <path d="M110 140 L57.7 192.3 A74 74 0 0 1 36 140 Z" fill="#FB8500"/>
+                <path d="M110 140 L36 140 A74 74 0 0 1 57.7 87.7 Z" fill="#FFD400"/>
+                <path d="M110 140 L57.7 87.7 A74 74 0 0 1 110 66 Z" fill="#2fb344"/>
+              </g>
+            </g>
+            <g class="hand"><rect x="107" y="74" width="6" height="70" rx="3" fill="#fff" stroke="#36333C" stroke-width="2"/></g>
+            <circle cx="110" cy="140" r="9" fill="#fff" stroke="#36333C" stroke-width="3"/>
+          </svg>
+        </div>
+        <div>
+          <p class="ready">Ready <span class="when" id="when">tomorrow</span></p>
+          <p class="ready-sub">Order by noon on 24th St, Long Island City.</p>
+          <div class="choices" role="group" aria-label="Product">
+            <button type="button" aria-pressed="true" data-when="tomorrow">Business cards</button>
+            <button type="button" aria-pressed="false" data-when="in 2 days">Flyers</button>
+            <button type="button" aria-pressed="false" data-when="in 3 days">Banners</button>
+          </div>
+          <span class="chip">Example times only. Uses i2Print's real turnaround once confirmed.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. File check scan -->
+  <section class="demo" aria-labelledby="d3">
+    <div class="demo-head">
+      <div>
+        <h2 id="d3"><span>3.</span> The file check you can watch</h2>
+        <p>A scan passes over the customer's artwork, the bleed and safe lines draw in, and each result pops in. It makes the free file check feel smart and trustworthy.</p>
+      </div>
+      <button class="replay" type="button" data-replay="scan">Replay</button>
+    </div>
+    <div class="stage">
+      <div class="scan-row" id="scanrow">
+        <div>
+          <div class="art scan" id="scan">
+            <div class="bubbles"></div>
+            <div class="name"><div><b>Astoria Bakery</b><span>Fresh daily · 31st Ave</span></div></div>
+            <svg viewBox="0 0 375 225" preserveAspectRatio="none" aria-hidden="true">
+              <path class="bleed" fill-rule="evenodd" d="M0 0H375V225H0Z M12.5 12.5V212.5H362.5V12.5Z"/>
+              <rect class="trim" x="12.5" y="12.5" width="350" height="200"/>
+              <rect class="safe" x="25" y="25" width="325" height="175"/>
+            </svg>
+            <div class="beam"></div>
+          </div>
+          <div class="legend"><span class="l1">Bleed</span><span class="l2">Trim</span><span class="l3">Safe zone</span></div>
+        </div>
+        <ul class="results" aria-live="polite">
+          <li><span class="ic ok">✓</span><span><b>Size:</b> 3.5 × 2 in business card, bleed added</span></li>
+          <li><span class="ic ok">✓</span><span><b>Resolution:</b> 300 dpi at print size</span></li>
+          <li><span class="ic warn">!</span><span><b>Shape fixed:</b> extended the background 20% to fit</span></li>
+          <li><span class="ic ok">✓</span><span><b>Ready for your proof.</b> Nothing prints until you approve.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <strong>Notes for the build</strong>
+    <ul>
+      <li>Pure CSS/SVG, no animation libraries, so there's nothing extra to download and it stays fast on phones.</li>
+      <li>Each animation runs once when it scrolls into view. Visitors with reduced motion turned on see the finished state.</li>
+      <li>Turnaround times and file results shown here are examples, not i2Print's real figures.</li>
+    </ul>
+    <p>Concept by RaxaRisk (raxarisk.com), 2026. i2Print name and brand colors used only to demonstrate the concept.</p>
+  </div>
+</footer>
+
+<script>
+(() => {
+  const targets = {
+    reg: document.getElementById("reg"),
+    watch: document.getElementById("watch"),
+    scan: document.getElementById("scan"),
+  };
+  const scanRow = document.getElementById("scanrow");
+
+  function play(key) {
+    const el = targets[key];
+    const extra = key === "scan" ? scanRow : null;
+    [el, extra].forEach(n => { if (!n) return; n.classList.remove("run"); void n.offsetWidth; n.classList.add("run"); });
+  }
+
+  // Reduced motion: show every finished state right away, no scroll trigger needed.
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) Object.keys(targets).forEach(play);
+
+  // Play each moment once when it scrolls into view.
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      const key = Object.keys(targets).find(k => targets[k] === e.target);
+      if (key) { play(key); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.4 });
+  Object.values(targets).forEach(t => io.observe(t));
+
+  document.querySelectorAll("[data-replay]").forEach(b => b.addEventListener("click", () => play(b.dataset.replay)));
+
+  const when = document.getElementById("when");
+  document.querySelectorAll(".choices button").forEach(b => b.addEventListener("click", () => {
+    document.querySelectorAll(".choices button").forEach(o => o.setAttribute("aria-pressed", String(o === b)));
+    when.textContent = b.dataset.when;
+    play("watch");
+  }));
+
+  window.__motion = { play };
+})();
+</script>
+</body>
+</html>

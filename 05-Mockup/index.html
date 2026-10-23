@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>i2Print Homepage Concept</title>
+<meta name="description" content="Concept mockup by RaxaRisk for i2print inc., Long Island City, NY. Not a live site.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue: #3A62C9;        /* accessible primary (proposed) */
+    --blue-brand: #5680E9;  /* current brand blue */
+    --blue-pale: #E1E9FE;
+    --orange: #FB8500;
+    --ink: #36333C;
+    --muted: #5d5966;
+    --line: #e3e6ef;
+    --pale: #F6F8FE;
+    --white: #ffffff;
+    --cyan: #00A6D6;
+    --magenta: #E0007A;
+    --yellow: #FFD400;
+    --ok: #1d7a46;
+    --warn: #a35f00;
+    --bad: #b3261e;
+    --radius: 14px;
+    --max: 1180px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; font-family: "Jost", system-ui, sans-serif; color: var(--ink); background: var(--white); line-height: 1.5; font-size: 17px; }
+  img { max-width: 100%; display: block; }
+  a { color: var(--blue); }
+  .wrap { max-width: var(--max); margin: 0 auto; padding: 0 16px; }
+  .ink-bar { height: 6px; background: linear-gradient(90deg, var(--cyan) 0 33.3%, var(--magenta) 33.3% 66.6%, var(--yellow) 66.6%); }
+  .show-client { display: none; }
+  body.client .tbd, body.client .hide-client, body.client .prod .turn { display: none !important; }
+  body.client .show-client { display: revert; }
+  .tbd { display: inline-block; font-size: 12px; font-weight: 600; letter-spacing: .02em; color: #6b4b00; background: #fff4cc; border: 1px dashed #d9a400; border-radius: 6px; padding: 1px 6px; vertical-align: middle; }
+
+  /* concept notice */
+  .concept { background: var(--ink); color: #fff; font-size: 14px; text-align: center; padding: 8px 16px; }
+  .concept strong { color: var(--yellow); }
+
+  /* utility bar */
+  .util { background: var(--pale); border-bottom: 1px solid var(--line); font-size: 14px; }
+  .util .wrap { display: flex; flex-wrap: wrap; gap: 6px 22px; justify-content: space-between; padding-top: 8px; padding-bottom: 8px; }
+  .util a { color: var(--ink); text-decoration: none; font-weight: 500; }
+
+  /* header */
+  header.site { position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,.96); backdrop-filter: blur(6px); border-bottom: 1px solid var(--line); }
+  header.site .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 12px; padding-bottom: 12px; }
+  .logo img { height: 44px; width: auto; }
+  nav.main { display: flex; gap: 22px; align-items: center; }
+  nav.main a { color: var(--ink); text-decoration: none; font-weight: 500; }
+  nav.main a:hover { color: var(--blue); }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border-radius: 999px; padding: 12px 22px; font: 600 16px "Jost", sans-serif; text-decoration: none; border: 2px solid transparent; cursor: pointer; }
+  .btn-primary { background: var(--blue); color: #fff; }
+  .btn-primary:hover { background: #2f52ad; }
+  .btn-accent { background: var(--orange); color: #1d1a20; }
+  .btn-accent:hover { background: #e67a00; }
+  .btn-ghost { background: transparent; color: var(--blue); border-color: var(--blue); }
+  .menu-toggle { display: none; }
+
+  /* hero */
+  .hero { background: radial-gradient(1200px 500px at 85% 20%, var(--blue-pale), transparent 60%), var(--white); }
+  .hero .wrap { display: grid; grid-template-columns: 1.1fr .9fr; gap: 40px; align-items: center; padding-top: 56px; padding-bottom: 56px; }
+  .eyebrow { font-weight: 600; color: var(--blue); letter-spacing: .06em; text-transform: uppercase; font-size: 14px; }
+  h1 { font-size: clamp(36px, 5.2vw, 60px); line-height: 1.05; margin: 10px 0 16px; font-weight: 700; letter-spacing: -.01em; }
+  h1 .accent { color: var(--blue); }
+  .lede { font-size: 20px; color: var(--muted); max-width: 34ch; margin: 0 0 26px; }
+  .cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 26px; }
+  .badges { display: flex; flex-wrap: wrap; gap: 10px; padding: 0; margin: 0; list-style: none; }
+  .badges li { background: var(--white); border: 1px solid var(--line); border-radius: 999px; padding: 8px 14px; font-size: 15px; font-weight: 500; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
+  .badges li b { color: var(--blue); }
+  .hero-art { position: relative; }
+  .hero-art .card { border-radius: 22px; overflow: hidden; box-shadow: 0 30px 60px -25px rgba(30,40,80,.35); }
+  .hero-art .wheel { position: absolute; width: 120px; height: 120px; border-radius: 50%; right: -14px; top: -20px; background: conic-gradient(var(--cyan), #3b5bdb, var(--magenta), #ff3b3b, var(--orange), var(--yellow), #2fb344, var(--cyan)); border: 8px solid #fff; box-shadow: 0 10px 30px rgba(0,0,0,.15); }
+  .hero-art .note { position: absolute; left: 14px; bottom: 14px; background: rgba(54,51,60,.85); color: #fff; font-size: 13px; border-radius: 8px; padding: 6px 10px; }
+
+  /* sections */
+  section { padding: 64px 0; }
+  section.alt { background: var(--pale); }
+  h2 { font-size: clamp(28px, 3.4vw, 40px); line-height: 1.15; margin: 0 0 10px; }
+  .sub { color: var(--muted); margin: 0 0 30px; max-width: 60ch; }
+
+  /* products */
+  .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+  .prod { text-decoration: none; color: inherit; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; transition: transform .15s, box-shadow .15s; }
+  .prod:hover { transform: translateY(-3px); box-shadow: 0 14px 30px -18px rgba(30,40,80,.4); }
+  .prod img { aspect-ratio: 1/1; object-fit: cover; width: 100%; background: var(--pale); }
+  .prod .body { padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 4px; flex: 1; }
+  .prod h3 { margin: 0; font-size: 19px; }
+  .prod .price { font-weight: 600; color: var(--blue); }
+  .prod .price.none { color: var(--muted); font-weight: 500; }
+  .prod .turn { font-size: 14px; color: var(--muted); }
+
+  /* steps */
+  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; counter-reset: s; }
+  .step { background: #fff; border-radius: var(--radius); padding: 22px; border: 1px solid var(--line); position: relative; }
+  .step::before { counter-increment: s; content: counter(s); position: absolute; top: -14px; left: 18px; width: 30px; height: 30px; border-radius: 50%; background: var(--blue); color: #fff; font-weight: 700; display: grid; place-items: center; }
+  .step:nth-child(2)::before { background: var(--magenta); }
+  .step:nth-child(3)::before { background: var(--orange); color: #1d1a20; }
+  .step:nth-child(4)::before { background: var(--ink); }
+  .step h3 { margin: 6px 0 6px; font-size: 19px; }
+  .step p { margin: 0; color: var(--muted); font-size: 16px; }
+
+  /* file check */
+  .fc { display: grid; grid-template-columns: 360px 1fr; gap: 26px; align-items: start; }
+  .panel { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; }
+  .panel label.lbl { display: block; font-weight: 600; margin: 0 0 6px; }
+  select, .file-input { width: 100%; font: 500 16px "Jost", sans-serif; padding: 10px 12px; border-radius: 10px; border: 1px solid #c9cedb; background: #fff; color: var(--ink); }
+  .drop { margin-top: 14px; border: 2px dashed #b7c3e6; border-radius: 12px; padding: 18px; text-align: center; background: var(--pale); cursor: pointer; }
+  .drop.over { border-color: var(--blue); background: var(--blue-pale); }
+  .drop p { margin: 4px 0; }
+  .small { font-size: 14px; color: var(--muted); }
+  .row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+  .seg { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 8px; }
+  .seg button { font: 600 15px "Jost", sans-serif; padding: 10px 6px; border-radius: 10px; border: 1px solid #c9cedb; background: #fff; color: var(--ink); cursor: pointer; }
+  .seg button[aria-pressed="true"] { background: var(--blue); border-color: var(--blue); color: #fff; }
+  .seg button:disabled { opacity: .45; cursor: not-allowed; }
+  .checks { list-style: none; padding: 0; margin: 14px 0 0; display: grid; gap: 8px; }
+  .checks li { display: grid; grid-template-columns: 26px 1fr; gap: 8px; align-items: start; font-size: 15px; }
+  .checks .ic { width: 22px; height: 22px; border-radius: 50%; display: grid; place-items: center; font-weight: 700; color: #fff; font-size: 13px; margin-top: 1px; }
+  .ic.ok { background: var(--ok); } .ic.warn { background: var(--warn); } .ic.bad { background: var(--bad); } .ic.na { background: #9aa0ad; }
+  .stage { background: repeating-conic-gradient(#eef0f5 0 25%, #fff 0 50%) 0 0 / 20px 20px; border: 1px solid var(--line); border-radius: var(--radius); min-height: 360px; display: grid; place-items: center; padding: 18px; }
+  .stage canvas { max-width: 100%; height: auto; box-shadow: 0 10px 30px -12px rgba(0,0,0,.35); background: #fff; }
+  .legend { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 10px; font-size: 14px; color: var(--muted); }
+  .legend span::before { content: ""; display: inline-block; width: 18px; height: 0; border-top: 2px dashed; margin-right: 6px; vertical-align: middle; }
+  .legend .l-trim::before { border-color: #1d4ed8; }
+  .legend .l-safe::before { border-color: #16a34a; }
+  .legend .l-bleed::before { border-top: 8px solid rgba(220,38,38,.25); }
+  .private { display: flex; gap: 8px; align-items: center; font-size: 14px; color: var(--ok); margin-top: 12px; font-weight: 500; }
+
+  /* local */
+  .local { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .ph { aspect-ratio: 4/3; border-radius: var(--radius); border: 2px dashed #c3c8d6; background: repeating-linear-gradient(45deg, #f4f5f9 0 12px, #eceef4 12px 24px); display: grid; place-items: center; text-align: center; padding: 16px; color: var(--muted); font-weight: 500; }
+  .quote { background: #fff; border-left: 6px solid var(--magenta); border-radius: 10px; padding: 22px 24px; margin-top: 26px; }
+  .quote p { font-size: 22px; margin: 0 0 6px; }
+
+  /* newsletter */
+  .news { background: var(--blue); color: #fff; border-radius: 22px; padding: 36px; display: grid; grid-template-columns: 1.2fr 1fr; gap: 24px; align-items: center; }
+  .news h2 { color: #fff; }
+  .news p { color: #e6ecff; margin: 0; }
+  .news form { display: flex; gap: 10px; flex-wrap: wrap; }
+  .news input { flex: 1 1 220px; font: 500 16px "Jost", sans-serif; padding: 13px 16px; border-radius: 999px; border: 0; }
+
+  /* footer */
+  footer { background: #232129; color: #d8d6de; padding: 48px 0 28px; margin-top: 64px; }
+  footer .cols { display: grid; grid-template-columns: 1.3fr 1fr 1fr 1fr; gap: 26px; }
+  footer h4 { color: #fff; margin: 0 0 10px; font-size: 16px; }
+  footer a { color: #d8d6de; text-decoration: none; display: block; padding: 2px 0; }
+  footer .map { aspect-ratio: 16/10; border-radius: 12px; border: 2px dashed #4a4752; display: grid; place-items: center; text-align: center; color: #9b98a3; font-size: 14px; padding: 10px; }
+  footer .legal { border-top: 1px solid #3a3742; margin-top: 30px; padding-top: 16px; font-size: 13px; color: #9b98a3; }
+
+  @media (max-width: 960px) {
+    nav.main { display: none; }
+    .menu-toggle { display: inline-flex; }
+    .hero .wrap { grid-template-columns: 1fr; padding-top: 36px; }
+    .hero-art { max-width: 480px; }
+    .grid { grid-template-columns: repeat(2, 1fr); }
+    .steps { grid-template-columns: repeat(2, 1fr); row-gap: 28px; }
+    .fc { grid-template-columns: 1fr; }
+    .local { grid-template-columns: 1fr 1fr; }
+    .news { grid-template-columns: 1fr; padding: 26px; }
+    footer .cols { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 560px) {
+    body { font-size: 16px; }
+    .util .hide-sm { display: none; }
+    header.site .btn-accent { display: none; }
+    .grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+    .prod h3 { font-size: 17px; }
+    .steps { grid-template-columns: 1fr; }
+    .local { grid-template-columns: 1fr; }
+    footer .cols { grid-template-columns: 1fr; }
+    section { padding: 48px 0; }
+  }
+</style>
+</head>
+<body>
+
+<div class="concept"><span class="hide-client">Concept mockup by <strong>RaxaRisk</strong> for i2print inc. Not a live site. Items marked <span class="tbd">CONFIRM</span> need real details from i2Print.</span><span class="show-client">Concept preview for i2print inc. by <strong>RaxaRisk</strong>. A first draft to react to, not a live site.</span></div>
+
+<div class="util">
+  <div class="wrap">
+    <span>📍 <a href="#visit">38-19 24th St, Long Island City, NY 11101</a></span>
+    <span class="hide-sm hide-client">Hours <span class="tbd">CONFIRM</span></span>
+    <span>📞 <a href="tel:+17189378800">(718) 937-8800</a> · <a href="https://wa.me/19297086369">WhatsApp</a></span>
+  </div>
+</div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="i2print home"><img src="../04-Assets/scraped-2026-10-20/logos/i2printLOGO_FOOTER_02.png" alt="i2print — service. speed. success." width="220" height="58"></a>
+    <nav class="main" aria-label="Main">
+      <a href="#products">Business Cards</a>
+      <a href="#products">Marketing</a>
+      <a href="#products">Large Format</a>
+      <a href="#file-check">Free File Check</a>
+      <a href="#visit">Visit the Shop</a>
+    </nav>
+    <a class="btn btn-accent" href="#products">Order online</a>
+    <button class="btn btn-ghost menu-toggle" type="button" aria-label="Open menu">Menu</button>
+  </div>
+</header>
+<div class="ink-bar" aria-hidden="true"></div>
+
+<main id="top">
+  <section class="hero" style="padding:0">
+    <div class="wrap">
+      <div>
+        <div class="eyebrow">Long Island City · Queens · NYC</div>
+        <h1>Queens' fast <span class="accent">local printer.</span></h1>
+        <p class="lede">Files checked by a printer. Prices up front. Pick up on 24th Street or get it shipped. <span class="tbd">CONFIRM</span></p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#products">Start an order</a>
+          <a class="btn btn-ghost" href="#file-check">Check my file free</a>
+        </div>
+        <ul class="badges">
+          <li class="hide-client">⏱ Order by <b>[noon]</b> → ready <b>[tomorrow]</b> <span class="tbd">CONFIRM</span></li>
+          <li class="show-client">⏱ Turnaround shown on every product</li>
+          <li>📍 Local pickup in LIC</li>
+          <li>✅ PDF proof before we print</li>
+        </ul>
+      </div>
+      <div class="hero-art">
+        <div class="wheel" aria-hidden="true"></div>
+        <div class="card"><img src="../04-Assets/scraped-2026-10-20/products/business-card_07410618202503.jpg" alt="i2print business cards" width="800" height="800"></div>
+        <div class="note"><span class="hide-client">Replace with a real photo of the i2Print shop or presses</span><span class="show-client">Your shop photo goes here</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="products" class="alt">
+    <div class="wrap">
+      <h2>Popular products</h2>
+      <p class="sub">Starting prices on every product, like the big online printers, with a real shop behind it. Prices below are as published on i2print.com on 2026-10-20. Products without a published price show "See pricing".</p>
+      <div class="grid">
+        <a class="prod" href="#file-check"><img src="../04-Assets/scraped-2026-10-20/products/business-card_07410618202503.jpg" alt="" loading="lazy"><div class="body"><h3>Business Cards</h3><span class="price">From $16.67</span><span class="turn">Turnaround <span class="tbd">CONFIRM</span></span></div></a>
+        <a class="prod" href="#file-check"><img src="../04-Assets/scraped-2026-10-20/products/letterhead_thumb_07384319202503.jpg" alt="" loading="lazy"><div class="body"><h3>Letterheads</h3><span class="price">From $55.00</span><span class="turn">Turnaround <span class="tbd">CONFIRM</span></span></div></a>
+        <a class="prod" href="#file-check"><img src="../04-Assets/scraped-2026-10-20/products/greeting-card_thumb_07560118202503.jpg" alt="" loading="lazy"><div class="body"><h3>Greeting Cards</h3><span class="price">From $65.85</span><span class="turn">Turnaround <span class="tbd">CONFIRM</span></span></div></a>
+        <a class="prod" href="#file-check"><img src="../04-Assets/scraped-2026-10-20/products/envelope_thumb_07464318202503.jpg" alt="" loading="lazy"><div class="body"><h3>Envelopes</h3><span class="price">From $97.00</span><span class="turn">Turnaround <span class="tbd">CONFIRM</span></span></div></a>
+        <a class="prod" href="#file-check"><img src="../04-Assets/scraped-2026-10-20/products/flyers_thumb_07483818202503.jpg" alt="" loading="lazy"><div class="body"><h3>Flyers</h3><span class="price none">See pricing</span><span class="turn">Turnaround <span class="tbd">CONFIRM</span></span></div></a>
+        <a class="prod" href="#file-check"><img src="../04-Assets/scraped-2026-10-20/products/postcard_thumb_08032118202503.jpg" alt="" loading="lazy"><div class="body"><h3>Postcards</h3><span class="price none">See pricing</span><span class="turn">Turnaround <span class="tbd">CONFIRM</span></span></div></a>
+        <a class="prod" href="#file-check"><img src="../04-Assets/scraped-2026-10-20/products/vinyl-banners_thumb.jpg" alt="" loading="lazy"><div class="body"><h3>Vinyl Banners</h3><span class="price none">See pricing</span><span class="turn">Turnaround <span class="tbd">CONFIRM</span></span></div></a>
+        <a class="prod" href="#file-check"><img src="../04-Assets/scraped-2026-10-20/products/yard-sign_thumb.jpg" alt="" loading="lazy"><div class="body"><h3>Yard Signs</h3><span class="price none">See pricing</span><span class="turn">Turnaround <span class="tbd">CONFIRM</span></span></div></a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>How it works</h2>
+      <p class="sub">Three ways to start: upload your file, pick a template, or design online. You'll approve a proof every time.</p>
+      <div class="steps">
+        <div class="step"><h3>Upload or design</h3><p>Upload your own file, start from a template, or design in the browser.</p></div>
+        <div class="step"><h3>Free file check</h3><p>We check size, resolution and bleed, and offer a one-click fix if something's off.</p></div>
+        <div class="step"><h3>Approve your proof</h3><p>You see exactly what prints, before it prints.</p></div>
+        <div class="step"><h3>Pick up or ship</h3><p>Grab it at 24th St in LIC, or we'll ship it to you.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="file-check" class="alt">
+    <div class="wrap">
+      <h2>Free file check <span class="tbd">DEMO</span></h2>
+      <p class="sub">Pick a product, drop in an image, and see right away whether it will print well. If the shape is wrong, fit it, fill it, or extend it. This demo runs entirely in your browser.</p>
+      <div class="fc">
+        <div class="panel">
+          <label class="lbl" for="product">Product</label>
+          <select id="product"></select>
+          <p class="small" id="spec"></p>
+
+          <div class="drop" id="drop" tabindex="0" role="button" aria-label="Choose an image to check">
+            <p><strong>Drop an image here</strong> or click to choose</p>
+            <p class="small">JPG or PNG. PDF checks come in the full version.</p>
+            <input class="file-input" id="file" type="file" accept="image/png,image/jpeg,image/webp" hidden>
+          </div>
+          <div class="row"><button class="btn btn-ghost" type="button" id="sample" style="padding:8px 16px;font-size:15px">Try a sample image</button></div>
+
+          <label class="lbl" style="margin-top:16px">Fix the shape</label>
+          <div class="seg" role="group" aria-label="Fix mode">
+            <button type="button" data-mode="fit" aria-pressed="true">Fit</button>
+            <button type="button" data-mode="fill" aria-pressed="false">Fill</button>
+            <button type="button" data-mode="extend" aria-pressed="false">Extend</button>
+          </div>
+          <p class="small" id="modeHelp"></p>
+
+          <ul class="checks" id="checks" aria-live="polite">
+            <li><span class="ic na">–</span><span>Add an image to start the check.</span></li>
+          </ul>
+          <div class="row"><button class="btn btn-primary" type="button" id="download" disabled>Download print-ready PNG</button></div>
+          <div class="private">🔒 Your file never leaves your browser.</div>
+        </div>
+        <div>
+          <div class="stage"><canvas id="out" width="700" height="400" aria-label="Print preview"></canvas></div>
+          <div class="legend"><span class="l-bleed">Bleed (trimmed off)</span><span class="l-trim">Trim line</span><span class="l-safe">Safe zone: keep text inside</span></div>
+          <p class="small" style="margin-top:10px">Bleed, safe-zone and resolution rules in this demo are common industry defaults (0.125" bleed and safe margin, 300 dpi, or 150 dpi for large format). <span class="tbd">CONFIRM</span> i2Print's exact specs. In the full version, <b>Extend</b> uses generative AI to paint in matching background. This demo shows a blurred-edge preview instead. Text and logos are never regenerated, and every fix goes to a proof the customer approves.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="visit">
+    <div class="wrap">
+      <h2>A real shop in Long Island City</h2>
+      <p class="sub">The one thing the big online printers can't show. These spots are reserved for a half-day photo shoot.</p>
+      <div class="local">
+        <div class="ph">Storefront on 24th St<br><span class="small">photo shoot</span></div>
+        <div class="ph">Presses running a real job<br><span class="small">photo shoot</span></div>
+        <div class="ph">The team, with names<br><span class="small">photo shoot, with permission</span></div>
+      </div>
+      <div class="quote">
+        <p>"…completely saved us…"</p>
+        <span class="small">Jen B, from i2print.com. In the new site, a Google reviews feed goes here once the review program is running.</span>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="news">
+        <div>
+          <h2>Get 50% off your first business cards</h2>
+          <p>Join the list for one useful email a month: seasonal deals, file tips and reorder reminders. <span class="tbd" style="background:#fff4cc">CONCEPT</span> This uses i2Print's existing first-order offer.</p>
+        </div>
+        <form onsubmit="event.preventDefault(); this.querySelector('button').textContent='Demo only: not submitted';">
+          <label for="em" class="sr" style="position:absolute;left:-9999px">Email</label>
+          <input id="em" type="email" placeholder="you@business.com" autocomplete="off">
+          <button class="btn btn-accent" type="submit">Send my code</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <img src="../04-Assets/scraped-2026-10-20/logos/retailer_site_logo799.png" alt="i2print" style="height:52px;width:auto;margin-bottom:12px">
+        <p style="margin:0 0 6px">38-19 24th Street<br>Long Island City, NY 11101</p>
+        <a href="tel:+17189378800">(718) 937-8800</a>
+        <a href="mailto:hello@i2print.com">hello@i2print.com</a>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <a href="#products">Business Stationery</a><a href="#products">Marketing Materials</a><a href="#products">Large Format</a><a href="#products">Request a Quote</a>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <a href="#file-check">Free File Check</a><a href="#file-check">File Prep Guide</a><a href="#visit">Pickup &amp; Hours</a><a href="#top">FAQs</a>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <div class="map">Google Map embed<br>Hours <span class="tbd">CONFIRM</span></div>
+      </div>
+    </div>
+    <div class="legal">Concept by RaxaRisk (raxarisk.com), 2026. Logo, product images and prices are i2print inc.'s own, used here only to demo the redesign.</div>
+  </div>
+</footer>
+
+<script>
+(() => {
+  // ?view=client hides internal CONFIRM tags for client-facing screenshots
+  if (new URLSearchParams(location.search).get("view") === "client") document.body.classList.add("client");
+
+  // Print specs: inches. Bleed/safe/dpi are common defaults until i2Print confirms its own.
+  const PRODUCTS = [
+    { id: "bc",  name: "Business card — 3.5 × 2 in",  w: 3.5, h: 2,   bleed: 0.125, safe: 0.125, dpi: 300 },
+    { id: "pc",  name: "Postcard — 6 × 4 in",         w: 6,   h: 4,   bleed: 0.125, safe: 0.125, dpi: 300 },
+    { id: "fl",  name: "Flyer — 8.5 × 11 in",         w: 8.5, h: 11,  bleed: 0.125, safe: 0.125, dpi: 300 },
+    { id: "po",  name: "Poster — 18 × 24 in",         w: 18,  h: 24,  bleed: 0.125, safe: 0.25,  dpi: 150 },
+    { id: "bn",  name: "Vinyl banner — 6 × 2 ft",     w: 72,  h: 24,  bleed: 0.5,   safe: 1,     dpi: 100 },
+  ];
+  const MAX_SIDE = 4000; // cap output pixels so large-format exports stay browser-friendly
+
+  const $ = (id) => document.getElementById(id);
+  const sel = $("product"), spec = $("spec"), out = $("out"), ctx = out.getContext("2d");
+  const checks = $("checks"), dl = $("download"), modeHelp = $("modeHelp");
+  let img = null, fileName = "artwork", fileType = "", mode = "fit";
+
+  PRODUCTS.forEach(p => sel.add(new Option(p.name, p.id)));
+  const product = () => PRODUCTS.find(p => p.id === sel.value);
+
+  const HELP = {
+    fit: "Fit keeps your whole image and fills the leftover space with a matching color.",
+    fill: "Fill covers the whole card and trims the edges that don't fit.",
+    extend: "Extend keeps your whole image and widens the background. Demo preview; AI fill in the full version.",
+  };
+
+  function describeSpec() {
+    const p = product();
+    spec.textContent = `Trim ${p.w} × ${p.h} in · bleed ${p.bleed} in · safe ${p.safe} in · min ${p.dpi} dpi`;
+  }
+
+  // Orient the product to match the image (portrait art → portrait card).
+  function oriented(p) {
+    if (!img) return p;
+    const imgPortrait = img.height > img.width, prodPortrait = p.h > p.w;
+    return imgPortrait === prodPortrait ? p : { ...p, w: p.h, h: p.w };
+  }
+
+  function edgeColor(source) {
+    const c = document.createElement("canvas"); c.width = 32; c.height = 32;
+    const x = c.getContext("2d"); x.drawImage(source, 0, 0, 32, 32);
+    const d = x.getImageData(0, 0, 32, 32).data; let r = 0, g = 0, b = 0, n = 0;
+    for (let i = 0; i < 32; i++) for (const [px, py] of [[i, 0], [i, 31], [0, i], [31, i]]) {
+      const k = (py * 32 + px) * 4; r += d[k]; g += d[k + 1]; b += d[k + 2]; n++;
+    }
+    return `rgb(${Math.round(r / n)},${Math.round(g / n)},${Math.round(b / n)})`;
+  }
+
+  // Draw the fixed artwork onto ctx2 sized W×H (full bleed canvas).
+  function compose(ctx2, W, H) {
+    const ir = img.width / img.height, cr = W / H;
+    const fitScale = Math.min(W / img.width, H / img.height);
+    const fillScale = Math.max(W / img.width, H / img.height);
+    ctx2.save();
+    if (mode === "fill") {
+      const w = img.width * fillScale, h = img.height * fillScale;
+      ctx2.drawImage(img, (W - w) / 2, (H - h) / 2, w, h);
+    } else {
+      if (mode === "fit") {
+        ctx2.fillStyle = edgeColor(img); ctx2.fillRect(0, 0, W, H);
+      } else {
+        const w = img.width * fillScale, h = img.height * fillScale;
+        ctx2.filter = `blur(${Math.round(Math.max(W, H) / 40)}px)`;
+        ctx2.drawImage(img, (W - w) / 2 - 20, (H - h) / 2 - 20, w + 40, h + 40);
+        ctx2.filter = "none";
+      }
+      const w = img.width * fitScale, h = img.height * fitScale;
+      ctx2.drawImage(img, (W - w) / 2, (H - h) / 2, w, h);
+    }
+    ctx2.restore();
+    return Math.abs(ir - cr) / cr;
+  }
+
+  function render() {
+    describeSpec();
+    const p = oriented(product());
+    const fullW = p.w + 2 * p.bleed, fullH = p.h + 2 * p.bleed;
+    // preview canvas
+    const PW = 700, scale = PW / fullW, PH = Math.round(fullH * scale);
+    out.width = PW; out.height = PH;
+    ctx.clearRect(0, 0, PW, PH);
+    if (!img) {
+      ctx.fillStyle = "#fff"; ctx.fillRect(0, 0, PW, PH);
+      ctx.fillStyle = "#8b8b8b"; ctx.font = "500 20px Jost, sans-serif"; ctx.textAlign = "center";
+      ctx.fillText("Your print preview appears here", PW / 2, PH / 2);
+      overlay(p, scale, PW, PH); return;
+    }
+    compose(ctx, PW, PH);
+    overlay(p, scale, PW, PH);
+    report(p);
+  }
+
+  function overlay(p, s, PW, PH) {
+    const b = p.bleed * s, sf = (p.bleed + p.safe) * s;
+    ctx.save();
+    ctx.fillStyle = "rgba(220,38,38,.22)";
+    ctx.fillRect(0, 0, PW, b); ctx.fillRect(0, PH - b, PW, b);
+    ctx.fillRect(0, b, b, PH - 2 * b); ctx.fillRect(PW - b, b, b, PH - 2 * b);
+    ctx.setLineDash([8, 6]); ctx.lineWidth = 2;
+    ctx.strokeStyle = "#1d4ed8"; ctx.strokeRect(b, b, PW - 2 * b, PH - 2 * b);
+    ctx.strokeStyle = "#16a34a"; ctx.strokeRect(sf, sf, PW - 2 * sf, PH - 2 * sf);
+    ctx.restore();
+  }
+
+  function li(state, html) {
+    const sym = { ok: "✓", warn: "!", bad: "✕", na: "–" }[state];
+    return `<li><span class="ic ${state}" aria-hidden="true">${sym}</span><span>${html}</span></li>`;
+  }
+
+  function report(p) {
+    const fullW = p.w + 2 * p.bleed, fullH = p.h + 2 * p.bleed;
+    const ir = img.width / img.height, tr = fullW / fullH;
+    const mismatch = Math.abs(ir - tr) / tr;
+    // Effective DPI of the art as placed: Fill enlarges to cover (lower dpi), Fit/Extend shrink to fit (higher dpi).
+    const dpiW = img.width / fullW, dpiH = img.height / fullH;
+    const dpi = Math.round(mode === "fill" ? Math.min(dpiW, dpiH) : Math.max(dpiW, dpiH));
+    const need = `${Math.round(fullW * p.dpi)} × ${Math.round(fullH * p.dpi)} px`;
+    let rows = "";
+    rows += li("ok", `<b>${img.width} × ${img.height} px</b> ${fileType ? "· " + fileType : ""}`);
+    if (dpi >= p.dpi) rows += li("ok", `Resolution looks good: <b>${dpi} dpi</b> at print size (needs ${p.dpi}).`);
+    else if (dpi >= p.dpi * 0.66) rows += li("warn", `Resolution is a bit low: <b>${dpi} dpi</b> (needs ${p.dpi}). It may look soft. Best: ${need}.`);
+    else rows += li("bad", `Resolution too low: <b>${dpi} dpi</b> (needs ${p.dpi}). It will look blurry. Upload at least ${need}, or ask us about AI upscaling.`);
+    if (mismatch < 0.02) rows += li("ok", "Shape matches the product.");
+    else rows += li("warn", `Shape doesn't match: off by <b>${Math.round(mismatch * 100)}%</b>. <b>${mode === "fill" ? "Fill" : mode === "fit" ? "Fit" : "Extend"}</b> is fixing it now. Check the preview.`);
+    rows += li("ok", `Bleed added: ${p.bleed} in on every side, so there are no white edges after trimming.`);
+    rows += li("warn", "Keep text and logos inside the <b>green</b> safe line.");
+    checks.innerHTML = rows;
+    dl.disabled = false;
+  }
+
+  function exportPNG() {
+    const p = oriented(product());
+    const fullW = p.w + 2 * p.bleed, fullH = p.h + 2 * p.bleed;
+    let W = Math.round(fullW * p.dpi), H = Math.round(fullH * p.dpi);
+    const k = Math.min(1, MAX_SIDE / Math.max(W, H)); W = Math.round(W * k); H = Math.round(H * k);
+    const c = document.createElement("canvas"); c.width = W; c.height = H;
+    compose(c.getContext("2d"), W, H);
+    c.toBlob(b => {
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(b);
+      a.download = `${fileName}-${p.id}-${mode}-${W}x${H}.png`;
+      a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+    }, "image/png");
+  }
+
+  function load(file) {
+    if (!file || !/^image\/(png|jpeg|webp)$/.test(file.type)) {
+      checks.innerHTML = li("bad", "That file type isn't supported in this demo. Use JPG or PNG. PDF checks come in the full version.");
+      return;
+    }
+    fileName = file.name.replace(/\.[^.]+$/, "").replace(/[^\w-]+/g, "_").slice(0, 40) || "artwork";
+    fileType = file.type.replace("image/", "").toUpperCase();
+    const url = URL.createObjectURL(file), im = new Image();
+    im.onload = () => { img = im; render(); };
+    im.src = url;
+  }
+
+  // A deliberately imperfect sample: 4:3 photo-ish art at modest resolution.
+  function sample() {
+    const c = document.createElement("canvas"); c.width = 900; c.height = 675;
+    const x = c.getContext("2d");
+    const g = x.createLinearGradient(0, 0, 900, 675); g.addColorStop(0, "#5680E9"); g.addColorStop(1, "#E0007A");
+    x.fillStyle = g; x.fillRect(0, 0, 900, 675);
+    for (let i = 0; i < 40; i++) { x.fillStyle = `rgba(255,255,255,${Math.random() * .15})`; x.beginPath(); x.arc(Math.random() * 900, Math.random() * 675, Math.random() * 90, 0, 7); x.fill(); }
+    x.fillStyle = "#fff"; x.font = "700 64px Jost, sans-serif"; x.textAlign = "center";
+    x.fillText("Astoria Bakery", 450, 330); x.font = "500 30px Jost, sans-serif"; x.fillText("Fresh daily · 31st Ave", 450, 380);
+    const im = new Image(); im.onload = () => { img = im; fileName = "sample"; fileType = "PNG (sample)"; render(); };
+    im.src = c.toDataURL("image/png");
+  }
+
+  const drop = $("drop"), input = $("file");
+  drop.addEventListener("click", () => input.click());
+  drop.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); input.click(); } });
+  input.addEventListener("change", () => load(input.files[0]));
+  ["dragenter", "dragover"].forEach(t => drop.addEventListener(t, e => { e.preventDefault(); drop.classList.add("over"); }));
+  ["dragleave", "drop"].forEach(t => drop.addEventListener(t, e => { e.preventDefault(); drop.classList.remove("over"); }));
+  drop.addEventListener("drop", e => load(e.dataTransfer.files[0]));
+  $("sample").addEventListener("click", sample);
+  sel.addEventListener("change", render);
+  dl.addEventListener("click", exportPNG);
+  document.querySelectorAll(".seg button").forEach(b => b.addEventListener("click", () => {
+    mode = b.dataset.mode;
+    document.querySelectorAll(".seg button").forEach(o => o.setAttribute("aria-pressed", String(o === b)));
+    modeHelp.textContent = HELP[mode]; render();
+  }));
+  modeHelp.textContent = HELP[mode];
+  document.fonts?.ready.then(render); render();
+
+  // expose for automated checks
+  window.__fc = { sample, setProduct: id => { sel.value = id; render(); }, state: () => ({ mode, img: img && [img.width, img.height] }) };
+})();
+</script>
+</body>
+</html>
