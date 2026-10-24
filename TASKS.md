@@ -1,6 +1,7 @@
 # Tasks
 
 ## Active
+- [ ] **Share the "Proposed Direction" doc with Tom & Lindsay** - https://claude.ai/artifact/FhjBFGzojCYAkbH8JcKwE6. Use Share (edit access so they can pick Agree/Disagree), or Export → PDF if outside sharing isn't offered. No pricing in it on purpose.
 - [ ] **Prototype i2Print's pricing in Shopify before promising it** - pick the hardest product (banners or business cards by stock × qty); confirm an options/pricing app can handle it
 - [ ] **Edit the Investment price ranges in the Gamma deck** - for i2Print proposal; remove the "[DRAFT: Daniel to finalize]" marker
 - [ ] **Verify the insurance wording against the policies/COI** - check the WC/EL split and that E&O covers web/software services; see 00-Admin/insurance-summary.md

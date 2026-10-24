@@ -155,6 +155,44 @@
   footer .map { aspect-ratio: 16/10; border-radius: 12px; border: 2px dashed #4a4752; display: grid; place-items: center; text-align: center; color: #9b98a3; font-size: 14px; padding: 10px; }
   footer .legal { border-top: 1px solid #3a3742; margin-top: 30px; padding-top: 16px; font-size: 13px; color: #9b98a3; }
 
+  /* Hover micro-interactions: mouse/trackpad only, and only when motion is welcome */
+  @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+    .hero { background: radial-gradient(520px 320px at var(--mx, 85%) var(--my, 20%), var(--blue-pale), transparent 65%), var(--white); }
+    nav.main a { position: relative; }
+    nav.main a::after { content: ""; position: absolute; left: 0; right: 0; bottom: -6px; height: 3px; border-radius: 2px; background: linear-gradient(90deg, var(--cyan), var(--magenta), var(--yellow)); transform: scaleX(0); transform-origin: left; transition: transform .25s ease; }
+    nav.main a:hover::after { transform: scaleX(1); }
+    .btn { transition: transform .15s ease, box-shadow .2s ease, background-color .2s ease, background-position .35s ease; }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 10px 20px -10px rgba(30,40,80,.5); }
+    .btn-primary { background-image: linear-gradient(90deg, #26468f 0 50%, var(--blue) 50%); background-size: 210% 100%; background-position: 100% 0; }
+    .btn-primary:hover { background-position: 0 0; }
+    .btn-ghost:hover { background: var(--blue-pale); }
+    .hero-art .wheel { transition: transform 1.2s cubic-bezier(.2,.8,.2,1); }
+    .hero-art:hover .wheel { transform: rotate(360deg); }
+    .hero-art .card { transform: perspective(900px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)); transition: transform .25s ease-out; }
+    .badges li { transition: transform .2s ease, border-color .2s ease; }
+    .badges li:hover { transform: translateY(-2px); border-color: var(--blue); }
+    .prod { position: relative; }
+    .prod img { transition: transform .45s cubic-bezier(.2,.8,.2,1); }
+    .prod:hover img { transform: scale(1.06); }
+    .prod::before { content: ""; position: absolute; left: 0; right: 0; top: 0; aspect-ratio: 1 / 1; z-index: 1; pointer-events: none; background: radial-gradient(rgba(58,98,201,.5) 1px, transparent 1.7px) 0 0 / 7px 7px; opacity: 0; transition: opacity .3s ease; }
+    .prod:hover::before { opacity: .45; }
+    .prod .body { position: relative; z-index: 2; background: #fff; }
+    .prod .body::after { content: "Order \2192"; font-weight: 600; font-size: 15px; color: var(--blue); margin-top: 4px; opacity: 0; transform: translateY(6px); transition: opacity .25s ease, transform .25s ease; }
+    .prod:hover .body::after { opacity: 1; transform: none; }
+    .step { transition: box-shadow .2s ease, border-color .2s ease; }
+    .step:hover { border-color: #c9d4f3; box-shadow: 0 14px 28px -18px rgba(30,40,80,.5); }
+    .step::before { transition: transform .3s cubic-bezier(.3,1.6,.5,1); }
+    .step:hover::before { transform: scale(1.15) rotate(-8deg); }
+    .drop { transition: border-color .2s ease, background-color .2s ease; }
+    .drop:hover { border-color: var(--blue); background: var(--blue-pale); }
+    .seg button { transition: border-color .15s ease, color .15s ease; }
+    .seg button:not([aria-pressed="true"]):hover { border-color: var(--blue); color: var(--blue); }
+    .ph { transition: border-color .2s ease, color .2s ease; }
+    .ph:hover { border-color: var(--magenta); color: var(--ink); }
+    footer a { transition: transform .2s ease, color .2s ease; }
+    footer a:hover { color: #fff; transform: translateX(4px); }
+  }
+
   @media (max-width: 960px) {
     nav.main { display: none; }
     .menu-toggle { display: inline-flex; }
@@ -367,6 +405,24 @@
 (() => {
   // ?view=client hides internal CONFIRM tags for client-facing screenshots
   if (new URLSearchParams(location.search).get("view") === "client") document.body.classList.add("client");
+
+  // Mouse-follow effects: hero spotlight + business-card tilt (mouse/trackpad only, motion welcome)
+  if (matchMedia("(hover: hover) and (pointer: fine)").matches && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    const hero = document.querySelector(".hero"), art = document.querySelector(".hero-art"), card = art && art.querySelector(".card");
+    hero.addEventListener("pointermove", e => {
+      const r = hero.getBoundingClientRect();
+      hero.style.setProperty("--mx", ((e.clientX - r.left) / r.width * 100).toFixed(1) + "%");
+      hero.style.setProperty("--my", ((e.clientY - r.top) / r.height * 100).toFixed(1) + "%");
+    });
+    if (card) {
+      art.addEventListener("pointermove", e => {
+        const r = card.getBoundingClientRect();
+        card.style.setProperty("--ry", (((e.clientX - r.left) / r.width - .5) * 10).toFixed(2) + "deg");
+        card.style.setProperty("--rx", (-((e.clientY - r.top) / r.height - .5) * 10).toFixed(2) + "deg");
+      });
+      art.addEventListener("pointerleave", () => { card.style.setProperty("--rx", "0deg"); card.style.setProperty("--ry", "0deg"); });
+    }
+  }
 
   // Print specs: inches. Bleed/safe/dpi are common defaults until i2Print confirms its own.
   const PRODUCTS = [
