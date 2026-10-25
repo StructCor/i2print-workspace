@@ -25,6 +25,7 @@
 - [ ] **Update the stale stack table in CCP Website/AGENTS.md §6** - it lists Next 16.2.4 and "no API routes"; actual is 16.3.5 with API routes
 
 ## Done
+- [x] ~~Document how Cloud Agents serve the mockup~~ (2026-10-24; `AGENTS.md` Cursor Cloud section; static files, Python on port 8742, no client send)
 - [x] ~~Sent the intro email to Tom & Lindsay (tom@ / Lindsay@i2print.com) with 5 screenshots, the MP4 and the GIF~~ (2026-10-20, verified in Sent)
 - [x] ~~Update the Gamma deck to the phased move off OnPrintShop; v2 PDF exported~~ (2026-10-20)
 - [x] ~~Build motion concepts page (05-Mockup/animated-concepts.html)~~ (2026-10-20)
