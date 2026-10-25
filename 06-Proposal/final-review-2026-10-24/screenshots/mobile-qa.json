@@ -1,0 +1,74 @@
+[
+  {
+    "route": "catalog",
+    "missing": 0,
+    "overflow": false,
+    "width": 375
+  },
+  {
+    "route": "product-cards",
+    "missing": 0,
+    "overflow": false,
+    "width": 375
+  },
+  {
+    "route": "product-banners",
+    "missing": 0,
+    "overflow": false,
+    "width": 375
+  },
+  {
+    "route": "business",
+    "missing": 0,
+    "overflow": false,
+    "width": 375
+  },
+  {
+    "route": "events",
+    "missing": 0,
+    "overflow": false,
+    "width": 375
+  },
+  {
+    "route": "visit",
+    "missing": 0,
+    "overflow": false,
+    "width": 375
+  },
+  {
+    "route": "capabilities",
+    "missing": 0,
+    "overflow": false,
+    "width": 375
+  },
+  {
+    "route": "motion",
+    "missing": 0,
+    "overflow": false,
+    "width": 375
+  },
+  {
+    "route": "roadmap",
+    "missing": 0,
+    "overflow": false,
+    "width": 375
+  },
+  {
+    "route": "quote",
+    "missing": 0,
+    "overflow": false,
+    "width": 375
+  },
+  {
+    "route": "file-check",
+    "missing": 0,
+    "overflow": false,
+    "width": 375
+  },
+  {
+    "route": "proof",
+    "missing": 0,
+    "overflow": false,
+    "width": 375
+  }
+]

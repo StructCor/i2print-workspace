@@ -1,0 +1,221 @@
+[
+  {
+    "image": "home-desktop.png",
+    "native": [
+      1425,
+      990
+    ],
+    "placed": [
+      655,
+      455
+    ]
+  },
+  {
+    "image": "home-desktop.png",
+    "native": [
+      1425,
+      990
+    ],
+    "placed": [
+      666,
+      463
+    ]
+  },
+  {
+    "image": "home-mobile-full.png",
+    "native": [
+      375,
+      760
+    ],
+    "placed": [
+      229,
+      465
+    ]
+  },
+  {
+    "image": "home-mobile-full.png",
+    "native": [
+      375,
+      760
+    ],
+    "placed": [
+      229,
+      465
+    ]
+  },
+  {
+    "image": "catalog.png",
+    "native": [
+      1425,
+      990
+    ],
+    "placed": [
+      666,
+      463
+    ]
+  },
+  {
+    "image": "product-cards.png",
+    "native": [
+      1425,
+      990
+    ],
+    "placed": [
+      666,
+      463
+    ]
+  },
+  {
+    "image": "product-banners.png",
+    "native": [
+      1425,
+      990
+    ],
+    "placed": [
+      666,
+      463
+    ]
+  },
+  {
+    "image": "quote-step-1.png",
+    "native": [
+      1425,
+      990
+    ],
+    "placed": [
+      525,
+      365
+    ]
+  },
+  {
+    "image": "quote-step-2.png",
+    "native": [
+      1425,
+      990
+    ],
+    "placed": [
+      525,
+      365
+    ]
+  },
+  {
+    "image": "quote-summary.png",
+    "native": [
+      1425,
+      990
+    ],
+    "placed": [
+      666,
+      463
+    ]
+  },
+  {
+    "image": "file-fit.png",
+    "native": [
+      1130,
+      730
+    ],
+    "placed": [
+      526,
+      340
+    ]
+  },
+  {
+    "image": "file-fill.png",
+    "native": [
+      1130,
+      730
+    ],
+    "placed": [
+      526,
+      340
+    ]
+  },
+  {
+    "image": "proof.png",
+    "native": [
+      1240,
+      910
+    ],
+    "placed": [
+      631,
+      463
+    ]
+  },
+  {
+    "image": "business.png",
+    "native": [
+      1425,
+      990
+    ],
+    "placed": [
+      525,
+      365
+    ]
+  },
+  {
+    "image": "events.png",
+    "native": [
+      1425,
+      990
+    ],
+    "placed": [
+      525,
+      365
+    ]
+  },
+  {
+    "image": "visit.png",
+    "native": [
+      1425,
+      990
+    ],
+    "placed": [
+      666,
+      463
+    ]
+  },
+  {
+    "image": "motion.png",
+    "native": [
+      1110,
+      320
+    ],
+    "placed": [
+      1041,
+      300
+    ]
+  },
+  {
+    "direction_page": 1,
+    "bottom_y": 180.4
+  },
+  {
+    "direction_page": 2,
+    "bottom_y": 131.4
+  },
+  {
+    "direction_page": 3,
+    "bottom_y": 72.0
+  },
+  {
+    "direction_page": 4,
+    "bottom_y": 121.8
+  },
+  {
+    "direction_page": 5,
+    "bottom_y": 129.8
+  },
+  {
+    "direction_page": 6,
+    "bottom_y": 121.8
+  },
+  {
+    "direction_page": 7,
+    "bottom_y": 135.2
+  },
+  {
+    "direction_page": 8,
+    "bottom_y": 129.2
+  }
+]

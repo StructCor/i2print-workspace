@@ -1,0 +1,61 @@
+{
+  "recordedUtc": "2026-10-25T00:16:44.8726315Z",
+  "status": "Final package for Daniel review; unsent",
+  "files": [
+    {
+      "path": "05-Mockup/final-v4/index.html",
+      "bytes": 2862,
+      "sha256": "4F15F470969BFEDD08961C763A00CB758FBE081E70CD9BC229B257BE9B2AE827"
+    },
+    {
+      "path": "05-Mockup/final-v4/styles.css",
+      "bytes": 21342,
+      "sha256": "0FE55E159068610F9BAA169629C9D2A485006151BA25D046686FF585103046E3"
+    },
+    {
+      "path": "05-Mockup/final-v4/app.js",
+      "bytes": 36726,
+      "sha256": "D5F4DD7FAFAF7A79792D73E0249C9743119106E0FEFDB9CC5FC9C2478D1A3A92"
+    },
+    {
+      "path": "05-Mockup/final-v4/presentation.js",
+      "bytes": 12242,
+      "sha256": "FC4F3B11B38B5C6648AA8FEA4BB2B4CFEBAD8532893976AD2F1111AC685E5850"
+    },
+    {
+      "path": "05-Mockup/final-v4/presentation.css",
+      "bytes": 17360,
+      "sha256": "4F5EAA3F64AECD8AD2BFFD830AFF6BCA23B9E0D2D62E7AE1E6F0BFC2D59411FC"
+    },
+    {
+      "path": "06-Proposal/final-review-2026-10-24/i2Print-Website-Concept.pdf",
+      "bytes": 8597802,
+      "sha256": "F43567040F50B1E46F10707D62E35B3244EEBA4E783D112B4A028A3F9E82F41D"
+    },
+    {
+      "path": "06-Proposal/final-review-2026-10-24/i2Print-Website-and-Automation-Proposal.pdf",
+      "bytes": 31682,
+      "sha256": "4D7FE5B096B23C3F085A89EDA5F7333D4AD3B263B0643A2468241E37C6688C09"
+    },
+    {
+      "path": "06-Proposal/final-review-2026-10-24/reply-to-tom-DRAFT.md",
+      "bytes": 2753,
+      "sha256": "671DF5047667462BFEF55C8E3EFC3196F5A19EE30EEBFCBA2617F19637118658"
+    },
+    {
+      "path": "06-Proposal/final-review-2026-10-24/direction-content.json",
+      "bytes": 15426,
+      "sha256": "33E3301E110BAFDB76210DCBB41E020E3C0FA0102087FE0278744D2D1E43DF44"
+    },
+    {
+      "path": "06-Proposal/final-review-2026-10-24/qa/fresh-review.md",
+      "bytes": 7299,
+      "sha256": "CF19B8DF03D9BF345EB660CD1628AA06EAD8EC2F6AB778463966AF71EC27BEEB"
+    },
+    {
+      "path": "06-Proposal/final-review-2026-10-24/qa/proof-decode-regression.cjs",
+      "bytes": 1457,
+      "sha256": "799B92F4D64F4E0E52D81BCA07C06788C634360646CE246BDC32E6F0BC55F451"
+    }
+  ]
+}
