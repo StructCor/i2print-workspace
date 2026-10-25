@@ -1,0 +1,74 @@
+[
+  {
+    "route": "catalog",
+    "title": "A good place to start.",
+    "layout": {
+      "missingImages": 0,
+      "overflow": false
+    }
+  },
+  {
+    "route": "product-cards",
+    "title": "Make your\nintroduction count.",
+    "layout": {
+      "missingImages": 0,
+      "overflow": false
+    }
+  },
+  {
+    "route": "product-banners",
+    "title": "Big ideas.\nHard to miss.",
+    "layout": {
+      "missingImages": 0,
+      "overflow": false
+    }
+  },
+  {
+    "route": "business",
+    "title": "Your brand.\nAll together.",
+    "layout": {
+      "missingImages": 0,
+      "overflow": false
+    }
+  },
+  {
+    "route": "events",
+    "title": "For the details\nthey’ll keep.",
+    "layout": {
+      "missingImages": 0,
+      "overflow": false
+    }
+  },
+  {
+    "route": "visit",
+    "title": "Let’s talk print.",
+    "layout": {
+      "missingImages": 0,
+      "overflow": false
+    }
+  },
+  {
+    "route": "capabilities",
+    "title": "Find the process\nbehind your project.",
+    "layout": {
+      "missingImages": 0,
+      "overflow": false
+    }
+  },
+  {
+    "route": "motion",
+    "title": "Three signature moments.",
+    "layout": {
+      "missingImages": 0,
+      "overflow": false
+    }
+  },
+  {
+    "route": "roadmap",
+    "title": "A website first.\nA stronger workflow next.",
+    "layout": {
+      "missingImages": 0,
+      "overflow": false
+    }
+  }
+]

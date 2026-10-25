@@ -17,3 +17,6 @@ desktop.ini
 .env.*
 *.key
 *.pem
+
+# Private recovered chat outputs and third-party research; local only.
+/07-Chat-Imports/

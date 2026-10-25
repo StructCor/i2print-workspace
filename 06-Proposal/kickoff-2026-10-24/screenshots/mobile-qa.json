@@ -1,0 +1,62 @@
+[
+  {
+    "broken": 0,
+    "overflow": false,
+    "route": "#catalog"
+  },
+  {
+    "broken": 0,
+    "overflow": false,
+    "route": "#product-cards"
+  },
+  {
+    "broken": 0,
+    "overflow": false,
+    "route": "#product-banners"
+  },
+  {
+    "broken": 0,
+    "overflow": false,
+    "route": "#quote"
+  },
+  {
+    "broken": 0,
+    "overflow": false,
+    "route": "#quote-summary"
+  },
+  {
+    "broken": 0,
+    "overflow": false,
+    "route": "#file-check"
+  },
+  {
+    "broken": 0,
+    "overflow": false,
+    "route": "#proof"
+  },
+  {
+    "broken": 0,
+    "overflow": false,
+    "route": "#business"
+  },
+  {
+    "broken": 0,
+    "overflow": false,
+    "route": "#events"
+  },
+  {
+    "broken": 0,
+    "overflow": false,
+    "route": "#visit"
+  },
+  {
+    "broken": 0,
+    "overflow": false,
+    "route": "#roadmap"
+  },
+  {
+    "broken": 0,
+    "overflow": false,
+    "route": "#motion"
+  }
+]

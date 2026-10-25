@@ -1,0 +1,218 @@
+{
+  "pages": [
+    {
+      "eyebrow": "01 / Website and automation proposal",
+      "title": "A clearer website, with a practical automation plan",
+      "intro": "Prepared for Tom and Lindsay at i2Print by Daniel Raxa, RaxaRisk, LLC. Proposed direction for discussion and approval.",
+      "sections": [
+        {
+          "heading": "Verified — your priorities",
+          "body": "Your email describes a website as the starting point for a broader goal: growth supported by marketing, estimates and pricing, file checks and proofs, production preparation, and shipping automation. You also asked for server control, costs, and a timeline."
+        },
+        {
+          "heading": "Proposed — make the work easier to understand",
+          "body": "Keep i2Print's logo, colors, and Jost typography. Build on the existing white-background concepts with clearer layouts, product graphics, and short print-inspired motion. Show corporate buyers and people planning personal projects where to start, what information to provide, and what happens next."
+        },
+        {
+          "heading": "What the concept demonstrates",
+          "body": "Browse capabilities and products, explore business and personal/event paths, prepare a quote request, check an image, and review a simulated proof. These demonstrations do not calculate approved prices, place orders, or release artwork to production."
+        },
+        {
+          "heading": "Owner-pending — agree the first release",
+          "body": "Use a 45-minute discovery session to confirm the priority audience, actual workflow, current system capabilities, and control requirements. That gives us the basis for a scoped price and schedule."
+        }
+      ]
+    },
+    {
+      "eyebrow": "02 / Research implications",
+      "title": "Build on what is already there",
+      "intro": "The research supports a clearer customer experience and a careful systems review. It does not establish i2Print's sales mix, operational capacity, or the features enabled in its current software.",
+      "sections": [
+        {
+          "heading": "Verified publication — ordering tools already described",
+          "body": "Your FAQ describes automatic product pricing, custom quotes, saved designs, PDF proof approval, and order tracking. These are published descriptions, not transaction-tested results. Discovery should establish what works today and where staff still repeat work."
+        },
+        {
+          "heading": "Owner-pending — licensed features and access",
+          "body": "OnPrintShop's release notes describe preflight insights and AI image tools. We should check your version, license, configuration, integrations, and export rights before estimating replacement work. Vendor capability does not establish what is enabled or used at i2Print."
+        },
+        {
+          "heading": "Verified publication — explain the capabilities",
+          "body": "Your About page advertises digital Indigo, offset, wide-format, and die-cut/packaging services. Proposed: explain these through relevant print examples and useful buying guidance. Specific press models, materials, capacity, turnaround, and approved project examples remain owner-pending."
+        },
+        {
+          "heading": "Proposed — serve both buying journeys",
+          "body": "Give business buyers a route for coordinated or repeat work and personal buyers a route for invitations, events, and individual projects. Your published B2B, B2C, and reseller positioning supports exploring these paths; the actual mix and priorities need your data."
+        }
+      ],
+      "sources": [
+        {"label": "i2Print FAQ — published ordering workflows", "url": "https://www.i2print.com/faq.html"},
+        {"label": "OnPrintShop — vendor release capabilities", "url": "https://onprintshop.com/release-notes/onprintshop-version-13-0"},
+        {"label": "i2Print About — advertised services and audiences", "url": "https://www.i2print.com/aboutus.html"}
+      ]
+    },
+    {
+      "eyebrow": "03 / Proposed automation roadmap",
+      "title": "Five work areas, with clear review points",
+      "intro": "First audit existing features and connections. Add automation where it addresses an observed bottleneck, with named staff responsible for exceptions and approvals.",
+      "sections": [
+        {
+          "heading": "Marketing and growth",
+          "body": "Prepare campaign drafts and reorder suggestions from agreed audiences, approved offers, and permission-based lists. Confirm capability claims and permission for examples. Staff approve audiences and messages before sending. Measure qualified inquiries and repeat orders."
+        },
+        {
+          "heading": "Estimates and pricing",
+          "body": "Use guided intake to collect size, stock, quantity, finishing, artwork, and fulfillment requirements. Reuse or integrate approved pricing rules where possible. AI may structure requests; it must not invent prices. Staff review custom jobs and exceptions."
+        },
+        {
+          "heading": "File checks and proofs",
+          "body": "The image prototype demonstrates dimensions, resolution estimates, and Fit/Fill; Extend is simulated. Production PDF preflight is additional work. Use validated checks, versioned proofs, and explicit customer approval. Staff resolve ambiguous failures; artwork changes are never silent."
+        },
+        {
+          "heading": "Production preparation",
+          "body": "Explore job tickets and preparation steps from approved artwork and order specifications. Confirm machine, color, imposition, and finishing requirements. Staff approve the exact file version released to production."
+        },
+        {
+          "heading": "Shipping",
+          "body": "Check existing carrier connections and tracking first. Prepare shipment details from confirmed packaging, weights, destinations, and dispatch rules. Staff approve purchases and dispatch; duplicate prevention and exception handling are part of the scope."
+        }
+      ]
+    },
+    {
+      "eyebrow": "04 / Proposed delivery sequence",
+      "title": "Approve one useful milestone at a time",
+      "intro": "Plan the move from OnPrintShop in stages, with current ordering available while replacements are validated. Confirm transition timing and dependencies before scheduling a launch.",
+      "sections": [
+        {
+          "heading": "1 — Discovery and design",
+          "body": "Confirm audiences, workflows, current licensing/configuration, and ownership requirements. Review the sitemap and key screens. Approval point: a defined first release, accepted design direction, and known technical questions."
+        },
+        {
+          "heading": "2 — Website alongside current ordering",
+          "body": "Build the approved customer-facing pages and agree how they connect to existing ordering. Test content, mobile usability, accessibility, and links. Approval point: a reviewed launch plan with a recovery procedure."
+        },
+        {
+          "heading": "3 — Validate any commerce migration",
+          "body": "Inspect sample exports and reproduce the hardest pricing example before selecting a replacement. Test one product family, data reconciliation, order handling, and redirects. Approval point: requirements satisfied and migration scope understood."
+        },
+        {
+          "heading": "4 — Pilot the first automation",
+          "body": "Choose a repeatable task with clear inputs and measurable effort. A staff-only inquiry-intake pilot is one candidate. Compare outputs with human review, test exceptions, and expand only after acceptance."
+        },
+        {
+          "heading": "5 — Maintain and improve",
+          "body": "Agree responsibility for updates, backups, monitoring, support, and access. Review real results before selecting the next automation or growth experiment."
+        }
+      ]
+    },
+    {
+      "eyebrow": "05 / Technology and ownership",
+      "title": "Define the control you want",
+      "intro": "Proposed production website: Next.js, React, TypeScript, plain CSS, and Node.js. The concept remains a local HTML/CSS/JavaScript demonstration; the production architecture is a discovery decision.",
+      "sections": [
+        {
+          "heading": "Client-owned managed hosting",
+          "body": "Vercel is one proposed option, with the account, billing, and access controlled by i2Print. Document source-code access and handoff. Control of a managed-service account is different from administering its underlying servers."
+        },
+        {
+          "heading": "Self-hosted infrastructure",
+          "body": "Next.js supports self-hosting. If you want infrastructure you administer, define the operator and responsibility for security updates, backups, monitoring, and recovery. That choice changes setup and ongoing support requirements."
+        },
+        {
+          "heading": "Commerce remains conditional",
+          "body": "Shopify is a candidate only after checking pricing, exports, workflow, and ownership requirements. It includes managed hosting rather than being software installed on your own server. Confirm that this matches your expectations before selecting it."
+        },
+        {
+          "heading": "Owner-pending — data and AI boundaries",
+          "body": "Clarify whether control means account ownership, server administration, data location, portability, or restrictions on external AI. Self-hosting a website does not make AI processing local. Agree where artwork and customer information may be processed before choosing services."
+        }
+      ],
+      "sources": [
+        {"label": "Next.js — self-hosting guidance", "url": "https://nextjs.org/docs/app/guides/self-hosting"},
+        {"label": "Shopify — included managed hosting", "url": "https://www.shopify.com/website/hosting"}
+      ]
+    },
+    {
+      "eyebrow": "06 / Discovery session",
+      "title": "A focused 45-minute working session",
+      "intro": "Proposed session for Tom, Lindsay, and Daniel. Use one typical job and one difficult job to connect the website concept to the shop's actual work.",
+      "sections": [
+        {
+          "heading": "0–10 minutes — audiences and capabilities",
+          "body": "Who buys now, and which customers do you want more of? Discuss corporate, reseller, and personal/event work without assuming the largest segment. Confirm the services, materials, production limits, and examples the website can describe."
+        },
+        {
+          "heading": "10–25 minutes — the order workflow",
+          "body": "Follow inquiry, pricing, artwork, proof approval, production, and shipping. Identify repeated entry, missing information, delays, and exceptions. Establish who approves the price, proof, production release, and shipment."
+        },
+        {
+          "heading": "25–35 minutes — systems and control",
+          "body": "Review the current OnPrintShop version, licensed modules, configuration, integrations, and available exports. Clarify the server and data requirements. Start with system descriptions and anonymized sample structures."
+        },
+        {
+          "heading": "35–45 minutes — scope and next steps",
+          "body": "Choose the first release and a possible automation pilot. Discuss budget expectations, capacity, decision-makers, dependencies, and success measures. Identify any validation needed before a reliable quote."
+        },
+        {
+          "heading": "Proposed output",
+          "body": "A prioritized scope, decisions and open questions with owners, acceptance criteria, and a basis for the implementation cost and schedule."
+        }
+      ]
+    },
+    {
+      "eyebrow": "07 / Business context",
+      "title": "Start with an anonymized 12-month summary",
+      "intro": "Owner-pending information. Existing research from Tom or Lindsay is welcome. Approximate percentages or ranges are sufficient for the first conversation.",
+      "sections": [
+        {
+          "heading": "Customers and products",
+          "bullets": [
+            "Revenue share and order-count share across businesses, consumers, and resellers, classified consistently without overlap.",
+            "Business industries and personal occasions, including weddings and events; leading products and average order value.",
+            "Repeat versus new business, seasonal patterns, and channels that produce inquiries or orders."
+          ]
+        },
+        {
+          "heading": "Keep the dimensions separate",
+          "body": "Customer type, industry or occasion, geography, and ordering channel answer different questions. A corporate customer can order online; a wedding job can arrive through a reseller. This helps us decide which pages and campaigns deserve priority."
+        },
+        {
+          "heading": "Workload and economics",
+          "body": "Summarize recurring issues in quotes, file repair, proofing, job preparation, and shipping. If available, include rough handling effort, rework, and which product groups are profitable to repeat. Use existing information rather than producing a new financial analysis for this call."
+        },
+        {
+          "heading": "An appropriate level of sharing",
+          "body": "Full financial statements, customer names, and identifiable order exports are unnecessary initially. If you prefer, we can put an NDA in place before sensitive details are shared and agree the transfer method and access."
+        }
+      ]
+    },
+    {
+      "eyebrow": "08 / Costs and schedule",
+      "title": "Price the work after the key decisions",
+      "intro": "The request for costs and a timeline is central to discovery. A reliable proposal needs a defined first release, verified technical dependencies, and an agreed level of ongoing responsibility.",
+      "sections": [
+        {
+          "heading": "Implementation costs",
+          "body": "Scope the website, commerce migration, and automation separately. Cost drivers include product and pricing complexity, export quality, approved content and graphics, file processing, integrations, testing, and training. Audit existing licensed features before budgeting to rebuild them."
+        },
+        {
+          "heading": "Delivery schedule",
+          "body": "Build a milestone schedule around access, sample exports, pricing validation, content approval, staff availability, and transition timing. Identify validation tasks before committing to the build. This concept does not quote a price or promise a delivery date."
+        },
+        {
+          "heading": "Recurring costs and responsibilities",
+          "body": "Separate hosting, commerce plans and apps, email, storage, backups, any AI usage, and ongoing support from build fees. Confirm current vendor rates at selection. Document which accounts i2Print owns and who operates each service."
+        },
+        {
+          "heading": "Decisions for the session",
+          "bullets": [
+            "Which audiences, capabilities, and customer journey lead the first release?",
+            "Which current features can be retained or connected during the move?",
+            "What does server control mean, and who will operate the systems?",
+            "Which bottleneck, budget, and success measures should guide the first automation?"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -5,6 +5,8 @@
 **Rules:** Portfolio = Commercial Crab Pots only, with **no FBM work** (litigation hold). Nothing is sent to the client without Daniel's review. Scraped assets are for the internal pitch mockup only.
 
 ## Contents
+Recovered artifacts and outputs from other chats: [October 24 collection index](07-Chat-Imports/2026-10-24/README.md), including the Proposed Direction PDF/Word/Markdown, original proposal v1, chat outputs, screenshots, and motion source frames. This is a private local archive; client-facing use still requires Daniel's approval.
+
 | Folder / file | What it is | Status |
 |---|---|---|
 | `00-Admin/insurance-summary.md` | Insurance lines for the proposal, plus risk notes | Draft: **verify against the policies** |

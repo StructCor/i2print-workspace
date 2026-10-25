@@ -1,0 +1,233 @@
+{
+  "pages": [
+    {
+      "eyebrow": "01 / Proposed direction",
+      "title": "Website first. Automation in stages.",
+      "intro": "Prepared for Tom and Lindsay at i2Print by Daniel Raxa, RaxaRisk, LLC. October 24, 2026. Draft for discussion.",
+      "sections": [
+        {
+          "heading": "Verified — what you asked for",
+          "body": "Your October 21 email starts with a new website and a broader goal: use AI and automation to help the business grow. You identified marketing, estimates and pricing, customer file checks and proofs, production setup, and shipping. You also asked for server control, costs, and a timeline."
+        },
+        {
+          "heading": "Proposed — how we approach it",
+          "body": "Begin with the customer journey and the shop workflow. Design the website around the customers you want to serve, then add automation where the inputs, rules, and approval steps are clear. Validate each step before connecting it to live orders."
+        },
+        {
+          "heading": "What this package demonstrates",
+          "body": "The companion concept shows browsing, product selection, a guided quote request, image checking, and a simulated proof review. These are discussion tools. They do not place orders, calculate approved prices, or release files to production."
+        },
+        {
+          "heading": "Owner-pending — the next decision",
+          "body": "A 45-minute discovery session will establish the priority audience, first release, system requirements, and information needed for a scoped price and schedule."
+        }
+      ]
+    },
+    {
+      "eyebrow": "02 / Research to opportunity",
+      "title": "Make the next step easier to understand",
+      "intro": "The initial strategic research points to practical areas worth testing with your customers. These are proposed improvements, not forecasts of sales or time saved.",
+      "sections": [
+        {
+          "heading": "Verified — several customer groups",
+          "body": "i2Print's About page describes B2B, B2C, and reseller services. Proposed: make the site easier to enter by need, with business printing and personal/event printing routes. Owner-pending: which groups should receive the most attention, based on your actual sales and capacity?"
+        },
+        {
+          "heading": "Verified — products and proofing already matter",
+          "body": "Your current site presents product categories, artwork upload or templates, and design-proof approval. Proposed: carry that familiar sequence into clearer product pages, a guided quote request, and a visible file-review step. Test where customers still need help."
+        },
+        {
+          "heading": "Proposed — make choices concrete",
+          "body": "MOO's product presentation offers a useful reference for showing paper and finish choices. For i2Print, use approved product examples, understandable specifications, and clear quote requirements. Publish prices and turnaround only after your team confirms the rules."
+        },
+        {
+          "heading": "Proposed — connect discovery to measurement",
+          "body": "Select a small set of measures: qualified quote requests, quote-to-order conversion, repeat ordering, and staff time spent clarifying files. Establish a baseline before setting targets."
+        }
+      ],
+      "sources": [
+        {
+          "label": "i2Print About — customer groups",
+          "url": "https://www.i2print.com/aboutus.html"
+        },
+        {
+          "label": "i2Print website — product and proof journey",
+          "url": "https://www.i2print.com/"
+        },
+        {
+          "label": "MOO — product presentation reference",
+          "url": "https://www.moo.com/us/business-cards"
+        }
+      ]
+    },
+    {
+      "eyebrow": "03 / Automation roadmap",
+      "title": "Five work areas, with clear review points",
+      "intro": "Proposed roadmap. The website and local demonstration are the starting point; live integrations and their results still need to be scoped and validated.",
+      "sections": [
+        {
+          "heading": "Marketing and growth",
+          "body": "Prepare campaigns and reorder reminders from an agreed audience, approved offers and permission-based lists. Discovery: which customer groups and channels bring repeat work? Staff approve audiences and messages before sending."
+        },
+        {
+          "heading": "Estimates and pricing",
+          "body": "Capture specifications now; later estimate from approved price matrices, minimums, finishing and delivery rules. Discovery: which jobs need exceptions, and who approves them? AI can gather requirements but must not invent prices."
+        },
+        {
+          "heading": "Customer file checks and proofs",
+          "body": "The prototype checks JPG, PNG and WebP dimensions/resolution and demonstrates Fit/Fill. Extend is simulated; PDF preflight and real AI extension are future work. Discovery: which file problems recur? Confirm specifications and require proof approval plus production review."
+        },
+        {
+          "heading": "Production setup",
+          "body": "Prepare job tickets from approved artwork and specifications. Needs: machine requirements, imposition, color and finishing rules. Discovery: where is information re-entered, and what can existing equipment accept? Staff approve release to production."
+        },
+        {
+          "heading": "Shipping",
+          "body": "Prepare shipment details after confirming carriers, packaging, weights and dispatch rules. Discovery: where do shipping errors or delays occur? Staff review before labels are purchased or dispatch is confirmed."
+        }
+      ]
+    },
+    {
+      "eyebrow": "04 / Delivery approach",
+      "title": "Approve one usable milestone at a time",
+      "intro": "Proposed sequence. Each milestone ends with something your team can review. The transition plan must be tested; uninterrupted ordering is a goal, not a guarantee.",
+      "sections": [
+        {
+          "heading": "1 — Discovery and design",
+          "body": "Confirm audience, workflows, ownership expectations, and the first release. Review the sitemap and key screens. Gate: agreed scope, requirements, and design direction."
+        },
+        {
+          "heading": "2 — Website alongside current ordering",
+          "body": "Proposed move from OnPrintShop: build and test the new website while current ordering remains in place. Agree how the two connect. Gate: accessible pages, correct content, working links, and an approved launch plan."
+        },
+        {
+          "heading": "3 — Validate a commerce migration",
+          "body": "Check actual exports and prototype the hardest pricing example before selecting a store platform. Move one product family at a time only after validation. Gate: reconciled data, tested payments and order handling, redirects, and a recovery plan. Timing is owner-pending."
+        },
+        {
+          "heading": "4 — Introduce automation incrementally",
+          "body": "Start with the most useful repeatable task identified in discovery. Test with sample data and staff review before expanding. Gate: correct outputs, clear exception handling, and an accountable approver."
+        },
+        {
+          "heading": "5 — Ongoing care",
+          "body": "Agree responsibility for maintenance, monitoring, access, backups, support, and small improvements. Review observed results before choosing the next investment."
+        }
+      ]
+    },
+    {
+      "eyebrow": "05 / Technology and control",
+      "title": "Define what control means for i2Print",
+      "intro": "Proposed production website: Next.js, React, TypeScript, plain CSS, and Node.js. The current concept is a local HTML/CSS/JavaScript demonstration, not the production implementation.",
+      "sections": [
+        {
+          "heading": "Managed hosting in your account",
+          "body": "Vercel is a proposed hosting option, with i2Print controlling the account, billing, and access. Source code and handoff arrangements would be documented. Owning a managed-service account does not mean administering the provider's servers."
+        },
+        {
+          "heading": "Infrastructure you administer",
+          "body": "Next.js also supports self-hosting. If server administration is your requirement, we will scope the infrastructure and who handles security updates, backups, monitoring, recovery, and support. This affects operating effort and ongoing cost."
+        },
+        {
+          "heading": "Store platform remains a decision",
+          "body": "Shopify is a candidate for commerce, subject to the pricing prototype, export review, staff workflow, and your control requirements. It is a managed service, not software installed on your own servers. Do not choose it before resolving that distinction."
+        },
+        {
+          "heading": "Owner-pending — account and data responsibilities",
+          "body": "Identify the owners of the domain, hosting, source repository, commerce, analytics, and email accounts. Agree access roles, data handling, export and handoff requirements, and approval authority before implementation."
+        }
+      ],
+      "sources": [
+        {
+          "label": "Next.js — self-hosting guidance",
+          "url": "https://nextjs.org/docs/app/guides/self-hosting"
+        },
+        {
+          "label": "Shopify — hosted commerce platform",
+          "url": "https://www.shopify.com/website/hosting"
+        }
+      ]
+    },
+    {
+      "eyebrow": "06 / Discovery session",
+      "title": "A focused 45-minute working session",
+      "intro": "Proposed agenda for Tom, Lindsay, and Daniel. Walk through one typical order and one difficult order so the plan reflects how the shop works.",
+      "sections": [
+        {
+          "heading": "0–10 minutes — customers and priorities",
+          "body": "Who buys now, who should buy more, and which products fit the shop's capacity? Choose the most important business result for the first release."
+        },
+        {
+          "heading": "10–25 minutes — order and file workflow",
+          "body": "Follow the job from inquiry through estimating, proofing, production setup, and shipping. Identify missing information, repeated work, exceptions, and who approves each handoff."
+        },
+        {
+          "heading": "25–35 minutes — systems and control",
+          "body": "Clarify server ownership versus administration. Confirm current platforms, accessible exports, migration timing, and responsibilities. Use sample export structures initially; do not bring passwords or customer records."
+        },
+        {
+          "heading": "35–45 minutes — scope and next decisions",
+          "body": "Select the first release and first automation candidate. Discuss budget expectations, capacity, decision-makers, dependencies, and what would count as success."
+        },
+        {
+          "heading": "Proposed output",
+          "body": "A prioritized scope, open questions with owners, a platform recommendation, acceptance criteria, and the information needed to prepare a realistic price and schedule. Remaining technical uncertainty may require a separately agreed validation step."
+        }
+      ]
+    },
+    {
+      "eyebrow": "07 / Audience and business context",
+      "title": "Start with a summary of the last 12 months",
+      "intro": "Owner-pending information. Existing research from Tom or Lindsay is welcome. Approximate percentages or ranges are enough to begin; an anonymized summary is preferred.",
+      "sections": [
+        {
+          "heading": "Who buys, and what they buy",
+          "bullets": [
+            "Revenue share and order-count share for businesses, consumers, and resellers. Classify each customer consistently so the groups do not overlap.",
+            "Business industries and personal occasions, including weddings and other events; top products and average order values.",
+            "New versus repeat customers, seasonal patterns, and channels that bring in inquiries or orders."
+          ]
+        },
+        {
+          "heading": "Keep different questions separate",
+          "body": "Customer type, industry or occasion, geography, and ordering channel are different dimensions. A local business can order online; a wedding order can come through a reseller. These distinctions help us choose useful landing pages and campaigns."
+        },
+        {
+          "heading": "Where work accumulates",
+          "body": "Describe the recurring delays in quotes, file repair, proof approvals, job preparation, and shipping. A few anonymized examples and rough volumes are enough for the first conversation."
+        },
+        {
+          "heading": "Share only what is needed",
+          "body": "Full financial statements, customer names, and identifiable order exports are unnecessary for the initial discussion. If you prefer, we can put an NDA in place before sensitive details are shared and agree an appropriate transfer method."
+        }
+      ]
+    },
+    {
+      "eyebrow": "08 / Costs and timing",
+      "title": "Set the scope before setting the commitment",
+      "intro": "Tom requested costs and a timeline. The next step is to establish the work those numbers would cover. This package does not quote a project price or promise a delivery date.",
+      "sections": [
+        {
+          "heading": "What drives the implementation cost",
+          "body": "The number and complexity of product families, pricing rules, available exports, content and photography, file-processing requirements, system integrations, hosting responsibilities, and staff training. Quote the website, migration, and automation work separately so each decision is visible."
+        },
+        {
+          "heading": "What drives the schedule",
+          "body": "Access and export readiness, approved content, pricing validation, staff availability, review turnaround, and migration timing. Build the schedule around agreed milestones and dependencies after discovery and any required technical validation."
+        },
+        {
+          "heading": "Make recurring costs explicit",
+          "body": "Show hosting, commerce plans and apps, email services, storage and backups, any AI usage, and ongoing support separately from build fees. Confirm vendor rates when selecting services; accounts and billing responsibilities remain owner-pending."
+        },
+        {
+          "heading": "Decisions to make together",
+          "bullets": [
+            "Which audience and customer journey should lead the first release?",
+            "What does server control mean, and who will operate it?",
+            "Which automation should we validate first?",
+            "What budget, capacity, and approval process should shape the scope?"
+          ]
+        }
+      ]
+    }
+  ]
+}

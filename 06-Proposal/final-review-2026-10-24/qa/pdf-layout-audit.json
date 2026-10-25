@@ -1,0 +1,243 @@
+[
+  {
+    "image": "home-desktop.png",
+    "native": [
+      1425,
+      1089
+    ],
+    "placed": [
+      595,
+      455
+    ]
+  },
+  {
+    "image": "home-desktop.png",
+    "native": [
+      1425,
+      1089
+    ],
+    "placed": [
+      606,
+      463
+    ]
+  },
+  {
+    "image": "home-mobile.png",
+    "native": [
+      360,
+      780
+    ],
+    "placed": [
+      215,
+      465
+    ]
+  },
+  {
+    "image": "home-mobile-products.png",
+    "native": [
+      360,
+      780
+    ],
+    "placed": [
+      215,
+      465
+    ]
+  },
+  {
+    "image": "capabilities.png",
+    "native": [
+      1425,
+      1089
+    ],
+    "placed": [
+      606,
+      463
+    ]
+  },
+  {
+    "image": "catalog.png",
+    "native": [
+      1425,
+      1089
+    ],
+    "placed": [
+      606,
+      463
+    ]
+  },
+  {
+    "image": "product-cards.png",
+    "native": [
+      1425,
+      1089
+    ],
+    "placed": [
+      606,
+      463
+    ]
+  },
+  {
+    "image": "product-banners.png",
+    "native": [
+      1425,
+      1089
+    ],
+    "placed": [
+      606,
+      463
+    ]
+  },
+  {
+    "image": "quote-step-1.png",
+    "native": [
+      1425,
+      1089
+    ],
+    "placed": [
+      478,
+      365
+    ]
+  },
+  {
+    "image": "quote-step-2.png",
+    "native": [
+      1425,
+      1089
+    ],
+    "placed": [
+      478,
+      365
+    ]
+  },
+  {
+    "image": "quote-summary.png",
+    "native": [
+      1425,
+      1089
+    ],
+    "placed": [
+      606,
+      463
+    ]
+  },
+  {
+    "image": "file-fit.png",
+    "native": [
+      1130,
+      730
+    ],
+    "placed": [
+      526,
+      340
+    ]
+  },
+  {
+    "image": "file-fill.png",
+    "native": [
+      1130,
+      730
+    ],
+    "placed": [
+      526,
+      340
+    ]
+  },
+  {
+    "image": "proof.png",
+    "native": [
+      1240,
+      910
+    ],
+    "placed": [
+      631,
+      463
+    ]
+  },
+  {
+    "image": "business.png",
+    "native": [
+      1425,
+      1089
+    ],
+    "placed": [
+      478,
+      365
+    ]
+  },
+  {
+    "image": "events.png",
+    "native": [
+      1425,
+      1089
+    ],
+    "placed": [
+      478,
+      365
+    ]
+  },
+  {
+    "image": "visit.png",
+    "native": [
+      1425,
+      1089
+    ],
+    "placed": [
+      606,
+      463
+    ]
+  },
+  {
+    "image": "upload-story.png",
+    "native": [
+      535,
+      370
+    ],
+    "placed": [
+      422,
+      292
+    ]
+  },
+  {
+    "image": "capability-panel.png",
+    "native": [
+      1121,
+      426
+    ],
+    "placed": [
+      526,
+      200
+    ]
+  },
+  {
+    "direction_page": 1,
+    "bottom_y": 180.4
+  },
+  {
+    "direction_page": 2,
+    "bottom_y": 114.8
+  },
+  {
+    "direction_page": 3,
+    "bottom_y": 72.0
+  },
+  {
+    "direction_page": 4,
+    "bottom_y": 105.2
+  },
+  {
+    "direction_page": 5,
+    "bottom_y": 111.8
+  },
+  {
+    "direction_page": 6,
+    "bottom_y": 88.6
+  },
+  {
+    "direction_page": 7,
+    "bottom_y": 118.6
+  },
+  {
+    "direction_page": 8,
+    "bottom_y": 129.2
+  }
+]
