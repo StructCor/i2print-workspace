@@ -51,7 +51,7 @@ Read this first, then `README.md` (file index) and `TASKS.md` (open work). Writt
 ## Git
 - Private repo `StructCor/i2print-workspace`, branch `main`.
 - **Push only as StructCor:** `GH_TOKEN=$(gh auth token -u StructCor)`. **Never** run `gh auth switch`.
-- A pre-push hook runs a rules-only review. Run the full AI review once per change before anything goes to the client.
+- A pre-push hook runs a rules-only review (free, no AI). **Do not run the full AI review (`review.ps1` without `-RulesOnly`, or any extra reviewer such as Claude, OpenRouter, Gemma or a Codex review) on commits, pushes or new commits you notice. Run it only when Daniel asks, normally once before something goes to the client.** One reviewer at a time; never several in parallel. Each review costs Daniel tokens.
 - `I2Print-Review/` (the review gate) sits in this folder but is not part of the repo. Don't commit it or edit it.
 - Commit or push only when Daniel asks.
 
