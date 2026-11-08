@@ -42,6 +42,7 @@
 - [x] **Build the October 24 kickoff drafts** - 14-page concept PDF, 8-page direction PDF, expanded local demo in 05-Mockup/kickoff-v3, draft reply and private Pages hub. Originals retained. See the delivery README and verification report; client delivery remains Daniel's decision.
 - [x] **Verify and review the kickoff package** (2026-10-24) - desktop/375px, keyboard, reduced motion, quote/file/proof flows, no external submissions, and all 22 PDF pages checked. Final working-file AI review: Claude PASS and local fallback PASS; OpenRouter produced no usable verdict. No commit/push gate or client delivery performed.
 - [x] **Consolidate accessible i2Print artifacts and chat outputs into the project** (2026-10-24) - recovered Proposed Direction as PDF/Word/Markdown, all three historical Gamma PDF exports, chat/research outputs, screenshots, and 235 motion frames. Sources retained; copies checked with SHA256; provenance and access gaps recorded in 07-Chat-Imports/2026-10-24/README.md.
+- [x] ~~Document how Cloud Agents serve the mockup~~ (2026-10-24; `AGENTS.md` Cursor Cloud section; static files, Python on port 8742, no client send)
 - [x] ~~Sent the intro email to Tom & Lindsay (tom@ / Lindsay@i2print.com) with 5 screenshots, the MP4 and the GIF~~ (2026-10-20, verified in Sent)
 - [x] ~~Update the Gamma deck to the phased move off OnPrintShop; v2 PDF exported~~ (2026-10-20)
 - [x] ~~Build motion concepts page (05-Mockup/animated-concepts.html)~~ (2026-10-20)

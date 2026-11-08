@@ -103,6 +103,14 @@ python -m http.server 8742 --directory "C:/Users/raxad/Documents/I2Print"
 - **Images load from `../04-Assets/`.** They only show on Daniel's PC, not from a fresh clone of the repo.
 - **Daniel's Windows has reduce-motion on.** Turn on Settings → Accessibility → Visual effects → Animation effects to see the animations and hover effects.
 
+## Cursor Cloud specific instructions
+This checkout is a static pitch workspace (HTML and Markdown). There is no package manager, lockfile, test suite, or production build. Python 3 from the base image is enough, and no secrets are required.
+
+- Serve the repo root with `python3 -m http.server 8742 --bind 0.0.0.0`. The Windows directory in the block above is Daniel's PC and is not present in Cloud Agents. Cloud Agents start this server on port 8742; if `http://127.0.0.1:8742/05-Mockup/index.html` already responds, leave it running.
+- `04-Assets/scraped-*/` is gitignored, so product photos 404 on a fresh clone. The file-check demo still runs: open `05-Mockup/index.html` and use **Try a sample** (also `window.__fc.sample()`). Switch Fit / Fill / Extend and confirm the check list updates.
+- `dashboard.html` asks for a local `TASKS.md` via the file picker. It does not fetch that file over HTTP.
+- Nothing here is sent to the client. Do not deploy, share a link, or send email from this workspace.
+
 ## Next steps, in order
 1. When Tom and Lindsay reply: book the call. Trim and send `01-Discovery/questionnaire.md` 2–3 days before it.
 2. Before the call:
